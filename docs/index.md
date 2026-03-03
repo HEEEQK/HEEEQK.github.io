@@ -23,14 +23,12 @@ comments: true
 
     - [ ] 网页搭建与发布
     - [ ] 玩转 Materail 
-    - [x] [Markdown 速记](http://dixilog.github.io/build_your_web/markdown%20%E9%80%9F%E8%AE%B0/) [95%]
+    - [x] [Markdown 速记](http://HEEEQK.github.io/build_your_web/markdown%20%E9%80%9F%E8%AE%B0/) 
 
 
-!!! quote "打油诗"
-    多少桐柳不得问，匆忙梦里寻佳人  
-    辗转衾湿茫然顾，恍惚秦皇骊山坟
+!!! q
 
 > 联系方式：
 > 
-> QQ:1444127184
+> QQ:2945600954
 > 
