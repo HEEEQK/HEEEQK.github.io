@@ -5,17 +5,16 @@ comments: true
 <div id="progress-container">
   <div id="progress-bar"></div>
 </div>
-# Welcome to dixi's BLOG~
+# Welcome to HQK's BLOG~
 
-这里是 dixi ，希望你能喜欢这里~~
+这里是 HQK ，希望你能喜欢这里~~
 
 !!! note "Who am I?"
-    - 青龙山外派光明顶发电厂首席技工
-    - NBU本科在读（自称 *NBUCETer* ）
-    - 喜欢看书，喜欢折腾，喜欢开源
+    - 宁大本科在读
+    - 喜欢折腾，喜欢开源
 
-!!! tip "dixiLOG 览揆之辰"
-    2024-07-08
+!!! tip "HQKLOG 览揆之辰"
+    2025-07-08
 
 !!! warning "本博客尚在施工中~"
 
