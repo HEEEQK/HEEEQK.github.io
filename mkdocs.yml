@@ -145,7 +145,6 @@ plugins:
       json_feed_enabled: true
       use_git: true
 
-    
 # mk扩展配置
 markdown_extensions:
   - toc:
