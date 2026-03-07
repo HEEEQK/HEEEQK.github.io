@@ -1,6 +1,3 @@
-
-#路径 D:\application\anaconda3\envs\dixiLOG\Lib\site-packages\material\templates
-
 # 项目信息
 site_author: HQK         # 作者
 # 站名
@@ -66,85 +63,58 @@ theme:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
     repo: fontawesome/brands/git-alt 
-
   # 功能
   features:
     # - header.autohide # 自动隐藏头部
     - navigation.instant # 导航栏快速跳转
     - navigation.tabs # 导航栏多标签
-    # - navigation.sections # 开启后左侧导航栏不折叠
+    - navigation.sections # 导航栏分组
     - navigation.tracking # 导航栏URL跟踪
     - navigation.footer # 底部导航栏
     - search.highlight # 搜索结果高亮
     # - navigation.expand # 导航栏展开
     - navigation.indexes # 提供概述页面
-    - navigation.prune # 导航栏修剪
     - toc.follow # 目录跟随
     # - navigation.tabs # 顶级索引被作为tab
     # - navigation.tabs.sticky # 导航栏始终可见
-    # - toc.integrate # 目录集成左边栏
+    # - toc.integrate # 目录集成
     - navigation.top # 快速回到顶部
-    - content.code.annotate # 代码注解
-    - content.tooltips # 工具提示
+    # - content.code.annotate # 代码注解
+    # - search.share # 搜索结果分享 
     - search.suggest # 搜索建议
     - search.share # 搜索结果分享
     - content.code.copy # 复制代码按钮
-    # - navigation.instant.prefetch # 预加载
-    # - navigation.instant.progress # 进度条
-
-
+    - navigation.instant.prefetch # 预加载
+    - navigation.instant.progress # 进度条
 # 插件配置
 plugins:
-  - search: # 搜索
-      lang: 
-        - en
-        - zh  # 中文搜索支持
-      separator: '[\s\u200b\-]' # 分隔符
-  - tags # 标签功能 插件
-  - glightbox: # 图片灯箱
-      skip_classes:
-          - custom-skip-class-name
-  # - meta-descriptions:
-  #     export_csv: false
-  #     quiet: false
-  #     enable_checks: false
-  #     min_length: 50
-  #     max_length: 160
-  #     trim: false # 元描述插件
-  - statistics: # 统计功能插件
-      page_template: "page_template/page_statistics.html"
-      words_per_minute: 180
-  - blog: # 博客功能插件
-      blog_dir: blog
-      pagination_per_page: 15 # 每页文章数
-      post_excerpt_separator: <!-- more -->
-      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"   # 页码格式
-      # pagination_keep_content: true   # 保留分页内容
-      # draft_if_future_date: true # 草稿发布日期大于当前日期则发布为草稿
-      post_readtime: false   # 关闭阅读时间
-      # post_readtime_words_per_minute: 300
-  # - print-site: # 打印功能插件
-  - git-revision-date-localized:  # 日期插件
-      enabled: true
-      fallback_to_build_date: true
-      enable_creation_date: true  # 显示创建时间
-      type: iso_datetime               # 日期显示格式（如 "2周前"）
-      # custom_format: "%Y-%m-%d"   # 自定义日期格式（如 "2023-10-01"）
-      locale: zh                  # 本地化语言（中文）
-      timezone: Asia/Shanghai     # 时区
-      exclude:                    # 排除某些文件
-      - index.md
-  - mkdocs-pdf          # pdf嵌入插件
-  - rss:                            # 新增
-      enabled: true
-      image: https://HEEEQK.github.io/docs/img/favicon.ico   # 整个频道的小图标
-      abstract_chars_count: -1                           # -1 代表输出全文，不截断
-      match_path: ".*"
-      length: 20
-      rss_feed_enabled: true
-      json_feed_enabled: true
-      use_git: true
-
+- search # 搜索
+- tags # 标签功能 插件
+# - meta-descriptions:
+#     export_csv: false
+#     quiet: false
+#     enable_checks: false
+#     min_length: 50
+#     max_length: 160
+#     trim: false # 元描述插件
+  # - statistics # 统计功能插件 
+  
+  # - blog: # 博客功能插件
+  #     blog_dir: .
+  #     blog_toc: true
+  #     post_date_format: full
+  #     archive_toc: true
+  #     categories_toc: true
+  #     pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+  #     pagination_keep_content: true
+  #     draft_if_future_date: true
+  
+  # - git-revision-date-localized:
+      # enable_creation_date: true # 启用创建日期
+      # enable_last_updated_date: true # 启用最后更新日期
+      # fallback_to_build_date: false # 启用日期，如果没有git信息，则使用构建日期
+      # format: "%Y-%m-%d" # 日期格式化
+      # locale: zh_CN # 语言
 # mk扩展配置
 markdown_extensions:
   - toc:
@@ -174,30 +144,25 @@ markdown_extensions:
   - pymdownx.caret
   - footnotes
   
-  # - pymdownx.betterem:     # 改进的强调
+  # - pymdownx.betterem:
   #     smart_enable: all
-  # # - pymdownx.emoji:
-  # #     emoji_index: !!python/name:materialx.emoji.twemoji
-  # #     emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.tabbed:      # 标签页
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:material.extensions.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.tabbed:
   #     alternate_style: true 
-  # - pymdownx.tasklist:    # 任务列表
+  # - pymdownx.tasklist:
   #     custom_checkbox: true
-  # - pymdownx.highlight:    # 代码高亮
+  # - pymdownx.highlight:
   #     anchor_linenums: true
-  # - pymdownx.arithmatex:  # 数学公式
+  # - pymdownx.arithmatex:
   #     generic: true
-  # # - pymdownx.superfences:    # diagrams | 流程图
-  # #     custom_fences:
-  # #       - name: mermaid
-  # #         class: mermaid
-  # #         format: !!python/name:pymdownx.superfences.fence_code_format
 
 # 其他配置
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/HEEEQKLOG
+      link: https://github.com/dixiLOG
       name: 我滴GitHub
   analytics:
     provider: google
