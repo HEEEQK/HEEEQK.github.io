@@ -25,7 +25,9 @@ nav:
       - build_your_web/markdown 速记.md
   - NBU-NOTEBOOK[TODO]: 
       - NBU-NOTEBOOK/index.md
-      
+      - 数字信号处理笔记:
+        - NBU-NOTEBOOK/DSP/cp01.md
+
   - 随手记[TODO]:
       - 随手记/index.md
   - Chronic Study[TODO]:
