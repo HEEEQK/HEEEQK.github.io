@@ -10,7 +10,7 @@ site_url: https://HEEEQK.github.io/
 site_description: >- # 项目描述
   Welcome to HQK's BLOG. Ad infinitum, ad aeternum progredi.
 # 代码仓库信息
-repo_name:  dixiLOG # 仓库名称
+repo_name:  HEEQKLOG # 仓库名称
 repo_url: https://github.com/HEEEQK/HEEEQK.github.io.git # 仓库地址
 # 版权信息
 copyright: Copyright &copy; 2024 | powered by HQKLOG | All rights reserved.
@@ -25,6 +25,7 @@ nav:
       - build_your_web/markdown 速记.md
   - NBU-NOTEBOOK[TODO]: 
       - NBU-NOTEBOOK/index.md
+      
   - 随手记[TODO]:
       - 随手记/index.md
   - Chronic Study[TODO]:
@@ -162,7 +163,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/dixiLOG
+      link: https://github.com/HEEEQKLOG
       name: 我滴GitHub
   analytics:
     provider: google
