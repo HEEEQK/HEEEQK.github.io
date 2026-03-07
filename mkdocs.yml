@@ -2,18 +2,18 @@
 #路径 D:\application\anaconda3\envs\dixiLOG\Lib\site-packages\material\templates
 
 # 项目信息
-site_author: dixi         # 作者
+site_author: HQK         # 作者
 # 站名
-site_name: dixi's BLOG
+site_name: HQK's BLOG
 # 站点地址
 site_url: https://HEEEQK.github.io/
 site_description: >- # 项目描述
-  Welcome to dixi's BLOG. Ad infinitum, ad aeternum progredi.
+  Welcome to HQK's BLOG. Ad infinitum, ad aeternum progredi.
 # 代码仓库信息
 repo_name:  dixiLOG # 仓库名称
 repo_url: https://github.com/HEEEQK/HEEEQK.github.io.git # 仓库地址
 # 版权信息
-copyright: Copyright &copy; 2024 | powered by dixiLOG | All rights reserved.
+copyright: Copyright &copy; 2024 | powered by HQKLOG | All rights reserved.
 # 导航树配置
 nav:
   - Home[TODO]: 
