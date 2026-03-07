@@ -177,9 +177,9 @@ markdown_extensions:
   
   - pymdownx.betterem:     # 改进的强调
       smart_enable: all
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:      # 标签页
       alternate_style: true 
   - pymdownx.tasklist:    # 任务列表
@@ -188,11 +188,11 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.arithmatex:  # 数学公式
       generic: true
-  - pymdownx.superfences:    # diagrams | 流程图
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  # - pymdownx.superfences:    # diagrams | 流程图
+  #     custom_fences:
+  #       - name: mermaid
+  #         class: mermaid
+  #         format: !!python/name:pymdownx.superfences.fence_code_format
 
 # 其他配置
 extra:
