@@ -1,3 +1,10 @@
+/* 页面宽度 */
+.md-grid {
+  max-width: 1440px; 
+}
+
+
+/* 自定义字体 */
 body {
     font-family: "LXGW WenKai", sans-serif;
     /* Lite version */
@@ -7,20 +14,23 @@ body {
     /* Screen version */
     /* font-family: "LXGW WenKai Screen", sans-serif; */
   }
-
+/* 按钮字体 */
 button.md-top {
     font-family: LXGW WenKai; /* 修改字体 */
     font-size: 16px; /* 修改字体大小 */
     font-weight: bold; /* 修改字体粗细 */
     color: #374148; /* 修改字体颜色 */
   }
+
+
+
 /* 鼠标样式 */
 #cursor {
     position: fixed;
     width: 16px;
     height: 16px;
     /* 这里改变跟随的底色 */
-    background: rgb(75, 30, 47);
+    background: rgb(209, 181, 116);
     border-radius: 10px;
     opacity: 0.4;
     z-index: 10086;
@@ -89,6 +99,43 @@ button.md-top {
     }
 }
 
+/* 新的点击水波效果 */
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #ede1c7; /* 可调整边框颜色 */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    animation: ripple-effect 0.8s ease-out forwards;
+}
+
+@keyframes ripple-effect {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(var(--random-scale, 4));
+        opacity: 0;
+    }
+}
+
+/* 鼠标滚动时的精致交互样式 */
+#cursor.scrolling {
+    transform: scale(1.3) ;  /* 稍微放大并轻微旋转 */
+    opacity: 0.85;                       /* 提升透明度，使效果更明显 */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);/* 添加柔和阴影，增强层次感 */
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+
+
 /* 图片放大start */
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -100,7 +147,7 @@ button.md-top {
 }
 
 .image-zoom-large {
-  transform: scale(1.9);
+  transform: scale(1.5);
   cursor: zoom-out;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 100;
@@ -112,7 +159,7 @@ button.md-top {
 
 
 
- 
+/* 进度条样式 */
 /* 整体 */
 #progress-container {
   position: fixed;
@@ -132,4 +179,105 @@ button.md-top {
 }
 
 
- 
+/* 友情链接样式 */
+
+.flink-list {
+  overflow: auto;
+  padding: 10px 10px 0;
+  text-align: center;
+}
+.flink-list a {
+  color: #4a4a4a;
+}
+[data-md-color-scheme="slate"] .flink-list a {
+  color: rgba(255,255,255,0.7);
+}
+/* 卡片样式 */
+.flink-list-item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 15px 7px;
+  width: calc(100% / 2 - 15px);
+  height: 90px;
+  border-radius: 8px;
+  line-height: 17px;
+  
+  background-color: rgba(68,138,255,.1);   /* 卡片背景颜色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 卡片阴影效果 */
+  transition: 0.25s;
+}
+
+.flink-item-icon {
+  float: left;
+  overflow: hidden;
+  margin: 15px 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 35px;
+}
+.flink-item-name {
+  padding: 19px 10px 0 0;
+  height: 40px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.flink-item-desc {
+  padding: 13px 10px 16px 0;
+  height: 50px;
+  font-size: 0.93em;
+}
+.flink-list-item:hover {
+  background-color: #cce1c6;
+}
+.flink-list-item {
+  width: calc(50% - 15px) !important;
+}
+
+@media screen and (max-width: 1310px) {
+  .flink-list-item {
+    width: calc(100% - 15px) !important;
+  }
+}
+@media screen and (max-width: 1219px) {
+  .flink-list-item {
+    width: calc(50% - 15px) !important;
+  }
+}
+@media screen and (max-width: 1027px) {
+  .flink-list-item {
+    width: calc(100% - 15px) !important;
+  }
+}
+@media screen and (max-width: 959px) {
+  .flink-list-item {
+    width: calc(50% - 15px) !important;
+  }
+}
+@media screen and (max-width: 692px) {
+  .flink-list-item {
+    width: calc(100% - 15px) !important;
+  }
+}
+
+
+
+/* --- 自定义表格列分隔线 --- */
+
+/* 基础样式：定义线条的颜色和样式（橙色虚线） */
+.md-typeset .col-sep-1 table td:nth-child(1),
+.md-typeset .col-sep-1 table th:nth-child(1),
+.md-typeset .col-sep-2 table td:nth-child(2),
+.md-typeset .col-sep-2 table th:nth-child(2) {
+    border-right: 1.5px dashed #c8b2b24e;
+}
+
+/* 进阶：如果你想恢复全竖线表格 */
+.md-typeset .col-sep-all table td,
+.md-typeset .col-sep-all table th {
+    border-right: 1.5px dashed #c8b2b24e;
+}
+.md-typeset .col-sep-all table td:last-child,
+.md-typeset .col-sep-all table th:last-child {
+    border-right: none;
+}
