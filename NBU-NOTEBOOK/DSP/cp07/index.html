@@ -12,31 +12,31 @@
         <meta name="author" content="HEEEQK">
       
       
-        <link rel="canonical" href="https://HEEEQK.github.io/NBU-NOTEBOOK/DSP/">
+        <link rel="canonical" href="https://HEEEQK.github.io/NBU-NOTEBOOK/DSP/cp07/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../cp06/">
       
       
-        <link rel="next" href="cp01/">
+        <link rel="next" href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>数字信号处理笔记 - HEEEQK's BLOG</title>
+        <title>DFT的谱分析 - HEEEQK's BLOG</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -61,7 +61,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -78,7 +78,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -87,7 +87,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#dft" class="md-skip">
           跳转至
         </a>
       
@@ -120,7 +120,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HEEEQK&#39;s BLOG" class="md-header__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
+    <a href="../../.." title="HEEEQK&#39;s BLOG" class="md-header__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数字信号处理笔记
+              DFT的谱分析
             
           </span>
         </div>
@@ -261,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -283,7 +283,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -303,7 +303,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-tabs__link">
+        <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-tabs__link">
           
   
     
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Chronic%20Study/" class="md-tabs__link">
+        <a href="../../../Chronic%20Study/" class="md-tabs__link">
           
   
     
@@ -343,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -378,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HEEEQK&#39;s BLOG" class="md-nav__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
+    <a href="../../.." title="HEEEQK&#39;s BLOG" class="md-nav__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -439,7 +439,7 @@
         
   
   
-    <a href="../.." class="md-nav__link">
+    <a href="../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -496,7 +496,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -569,7 +569,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -581,7 +581,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -603,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp01/" class="md-nav__link">
+      <a href="../cp01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp02/" class="md-nav__link">
+      <a href="../cp02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp03/" class="md-nav__link">
+      <a href="../cp03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp04/" class="md-nav__link">
+      <a href="../cp04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp05/" class="md-nav__link">
+      <a href="../cp05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -713,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp06/" class="md-nav__link">
+      <a href="../cp06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,10 +732,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="cp07/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DFT的谱分析
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -745,6 +766,109 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用离散傅里叶变换的信号分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      用DFT处理连续信号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      离散频率与连续频率的关系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      频率关系由已知点推位置点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dtftdft-dftctft" class="md-nav__link">
+    <span class="md-ellipsis">
+      DTFT推DFT频率 DFT推CTFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      正弦信号的DFT分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      频率分辨率
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      频域过采样
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dftfft" class="md-nav__link">
+    <span class="md-ellipsis">
+      DFT（FFT的误差来源）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -794,7 +918,7 @@
         
   
   
-    <a href="../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-nav__link">
+    <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -843,7 +967,7 @@
         
   
   
-    <a href="../../Chronic%20Study/" class="md-nav__link">
+    <a href="../../../Chronic%20Study/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -894,7 +1018,7 @@
         
   
   
-    <a href="../../blog/" class="md-nav__link">
+    <a href="../../../blog/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -943,9 +1067,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      利用离散傅里叶变换的信号分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      用DFT处理连续信号
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      复试题检测
+      离散频率与连续频率的关系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      频率关系由已知点推位置点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dtftdft-dftctft" class="md-nav__link">
+    <span class="md-ellipsis">
+      DTFT推DFT频率 DFT推CTFT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      正弦信号的DFT分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      频率分辨率
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      频域过采样
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dftfft" class="md-nav__link">
+    <span class="md-ellipsis">
+      DFT（FFT的误差来源）
     </span>
   </a>
   
@@ -970,108 +1166,114 @@
   
 
 
-<div><h1 id="_1">数字信号处理笔记<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<div><h1 id="dft">DFT的谱分析<a class="headerlink" href="#dft" title="Permanent link">¶</a></h1>
 <div id="progress-container">
   <div id="progress-bar"></div>
 </div>
 
-<h2 id="_2">复试题检测<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<details class="success">
-<summary>数字信号处理系统相较于模拟信号处理系统有何优缺点</summary>
-<ul>
-<li>优点：<br>
-     （1）灵活性<br>
-     （2）稳定可靠，不存在阻抗匹配问题<br>
-     （3）处理精度高<br>
-     （4）便于加解密<br>
-     （5）便于大规模集成化、小型化<br>
-     （6）便于自动化、多功能化
-     （7）可以实现模拟系统无法实现的复杂处理功能</li>
-</ul>
-<hr>
-<ul>
-<li>缺点：<br>
-     （1）数字系统相较于模拟系统更加复杂<br>
-     （2）无线的模拟量转化为有限的数字量不可避免会引入误差<br>
-     （3）速度与实时性更低<br>
-     （4）一般情况下，功耗与成本更高  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>简述用双线性变换法设计数字低通滤波器的步骤</summary>
-<ul>
-<li>
-<p>（1）确定数字低通滤波器的技术指标：<span class="arithmatex">\(\omega_p\)</span>、<span class="arithmatex">\(\omega_s\)</span>、<span class="arithmatex">\(\alpha_p\)</span>、<span class="arithmatex">\(\alpha_s\)</span>    </p>
-</li>
-<li>
-<p>（2）进行非线性预畸变矫正，将数字滤波器转换成模拟滤波器技术指标：<span class="arithmatex">\(\Omega_{p}=\frac{2}{T}\tan\frac{\omega_{p}}{2},\Omega_{s}=\frac{2}{T}\tan\frac{\omega_{s}}{2}\)</span>  </p>
-</li>
-<li>（3）设计满足指标要求的过度模拟滤波器的系统函数<span class="arithmatex">\(H_a(s)\)</span>  </li>
-<li>（4）将模拟滤波器 <span class="arithmatex">\(H_a(s)\)</span> 从s平面转换到z平面，得到数字滤波器的系统函数<span class="arithmatex">\(H(z)\)</span> ，即得到<span class="arithmatex">\(H\left(z\right)=H_{a}\left(s\right)\vert_{S=\frac{2}{T}\cdot\frac{1-z^{-1}}{1+z^{-1}}}\)</span> ，由于装线性变换法无频谱混叠问题，所以T可以任意取，一般取2  </li>
-</ul>
-</details>
-<hr>
+<h2 id="_1">利用离散傅里叶变换的信号分析<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>即：<span class="arithmatex">\(\widetilde{X}[k]=\left.X(e^{j\omega})\right|_{w=(2\pi/N)k}=X(e^{j(\frac{2\pi}{N})k})\)</span></p>
 <div class="admonition success">
-<p class="admonition-title">从 <span class="arithmatex">\(X_M(k)\)</span> 对应的时域有限长序列<span class="arithmatex">\(x_M(n)\)</span> 就是原序列<span class="arithmatex">\(x(n)\)</span>以M为周期做延拓的主值序列</p>
+<p class="admonition-title">对于有限长信号，DFT可以给出离散时间傅里叶变换的频域样本</p>
+<p>我们已知使用DTFT处理连续时间信号的框图如下：</p>
+</div>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260309213809.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="连续时间信号离散处理框图" src="https://img.heeeqkblog.dpdns.org/20260309213809.png"></a></p>
+<div class="highlight"><pre><span></span><code>首先将连续信号进行采样，使其变成离散信号，然后通过一个离散时间系统，最后将其还原成连续信号。
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">易混淆点</p>
+<p>ADC（模数转换器）与DAC（数模转换器）是物理器件或电路。而  C/D转换（连续到离散）与 D/C转换（离散到连续）本质上是数学模型或系统框图中的一个理想化模块。</p>
+</div>
+<p><strong>ADC</strong>：将连续变化的模拟信号（电压、电流）转换为离散的数字信号（二进制码）。这个过程必然包含采样（时间离散化）和量化（幅度离散化）。</p>
+<p><strong>DAC</strong>：将数字信号转换为模拟信号。它通常输出的是阶梯状的模拟电压，需要后续的平滑滤波器才能恢复成平滑的波形。</p>
+<p><strong>C/D转换</strong>：在理想数学模型中将连续时间信号 <span class="arithmatex">\(x_c(t)\)</span> 转换为离散时间序列 <span class="arithmatex">\(x[n]\)</span> 。在理想情况下，它只关心采样定理（时域上的抽取），通常忽略了硬件实现中的量化过程（认为幅度是无限精度的）。</p>
+<p><strong>D/C转换</strong>：在理想数学模型中将离散时间序列 <span class="arithmatex">\(y[n]\text{ 转换回连续时间信号 }y_c(t)\mathrm{。}\)</span> 。它通常被建模为理想内插（例如使用 sinc 函数），旨在无失真地重建带限信号。</p>
+<hr>
+<h2 id="dft_1">用DFT处理连续信号<a class="headerlink" href="#dft_1" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code>使用DFT处理连续信号的框图如下：
+</code></pre></div>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310091258.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DFT处理连续信号框图" src="https://img.heeeqkblog.dpdns.org/20260310091258.png"></a></p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310093012.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="各信号图" src="https://img.heeeqkblog.dpdns.org/20260310093012.png"></a></p>
+<p><strong>抗混叠滤波器</strong>：本质是低通滤波器，由于不存在理想滤波器，所以会存在失真。</p>
+<p><strong>最大区别</strong>：将转换后的离散信号经过一个有限长的窗函数 <span class="arithmatex">\(\mathit{w}[n]\)</span> （其频域为Sa函数）做截断，使其成为有限离散信号，然后进行DFT。</p>
+<p><strong>增大采样频率</strong>：若想要抽样间隔 <span class="arithmatex">\(\frac{2\pi}{N}\)</span> 变小，则需要N增大，即在实际操作中将截断后的离散信号最后处补0。若窗长不够，则有可能导致波峰重合，产生失真。</p>
+<p><strong>主瓣宽度</strong>：其大小为 <span class="arithmatex">\(\frac{4\pi}{N}\)</span> ，不仅与窗长有关，还与截断窗的形状有关。</p>
+<hr>
+<h2 id="_2">离散频率与连续频率的关系<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p><strong>DFT与DTFT</strong>：<span class="arithmatex">\(w_k=\frac{2\pi}{N}k\)</span></p>
+<p><strong>DTFT与CTFT</strong>：<span class="arithmatex">\(Ω_k=\frac{2\pi}{NT}k\)</span></p>
+<p><strong>物理频率</strong>:<span class="arithmatex">\(f_k=\frac{1}{NT}k\)</span></p>
+<ul>
+<li>其中 <span class="arithmatex">\(Ω_k\)</span> 是连续频率， <span class="arithmatex">\(f_k\)</span> 是物理频率</li>
+</ul>
+<hr>
+<h2 id="_3">频率关系由已知点推位置点<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<div class="arithmatex">\[\begin{aligned}&amp; 若x_c(t)为实,则x(n)为实,则得 V[k]=V^*[(-k)_N]。即若知一点V[a],则可知V[N-a]\end{aligned}\]</div>
+</li>
+<li>即：<span class="arithmatex">\({V}^*[a] = V[N - a]\)</span></li>
+</ul>
+<hr>
+<h2 id="dtftdft-dftctft">DTFT推DFT频率 DFT推CTFT<a class="headerlink" href="#dtftdft-dftctft" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><span class="arithmatex">\(V[k]\)</span>推知<span class="arithmatex">\(V[e^{jw}]\)</span>（离散）：<span class="arithmatex">\(V(e^{j(\frac{2\pi}{N})k})=V[k]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(V[k]\)</span>推知<span class="arithmatex">\(V[jΩ]\)</span>（连续）：<span class="arithmatex">\(V[jΩ]=T·V(e^{j(\frac{2\pi}{N})k})\)</span></p>
+</li>
+</ul>
+<p><strong>T的来源</strong>：<span class="arithmatex">\(X(\mathrm{e}^{\mathrm{j}\omega})=\frac{1}{T}\sum_{n=-\infty}^{\infty}X_{c}\left(\mathrm{j}\frac{\omega}{T}+\mathrm{j}\frac{2\pi n}{T}\right)\)</span></p>
+<h2 id="dft_2">正弦信号的DFT分析<a class="headerlink" href="#dft_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>正弦信号的DFT分析：就是对窗的频谱位移</li>
+</ul>
+<div class="arithmatex">\[\begin{equation}x[n]=A_{0}\mathrm{cos}(\omega_{0}n+\theta_{0})+A_{1}\mathrm{cos}(\omega_{1}n+\theta_{1}),\quad-\infty&lt;n&lt;\infty\end{equation}\]</div>
+<div class="arithmatex">\[\begin{equation}\begin{aligned}V(\mathrm{e}^{\mathrm{j}\omega})&amp;=\frac{A_{0}}{2}\mathrm{e}^{\mathrm{j}\theta_{0}}W(\mathrm{e}^{\mathrm{j}(\omega-\omega_{0})})+\frac{A_{0}}{2}\mathrm{e}^{-\mathrm{j}\theta_{0}}W(\mathrm{e}^{\mathrm{j}(\omega+\omega_{0})})\\&amp;+\frac{A_{1}}{2}\mathrm{e}^{\mathrm{j}\theta_{1}}W(\mathrm{e}^{\mathrm{j}(\omega-\omega_{1})})+\frac{\Lambda_{1}}{2}\mathrm{e}^{-\mathrm{j}\theta_{1}}W(\mathrm{e}^{\mathrm{j}(\omega+\omega_{1})})\end{aligned}\end{equation}\]</div>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310103615.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="演示图1" src="https://img.heeeqkblog.dpdns.org/20260310103615.png"></a></p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310103702.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="演示图2" src="https://img.heeeqkblog.dpdns.org/20260310103702.png"></a></p>
+<ul>
+<li>
+<p>上图分别展示了不同 <span class="arithmatex">\(w_0\)</span> 与 <span class="arithmatex">\(w_1\)</span> 时的场景，当 <span class="arithmatex">\(w_0-w_1≤\frac{2\pi}{N}+\frac{2\pi}{N}\)</span> ，波峰的主瓣就会重叠</p>
+</li>
+<li>
+<p>对于不同的 <span class="arithmatex">\(w\)</span> ，波峰的主瓣是相同的，都是 <span class="arithmatex">\(\frac{4\pi}{N}\)</span></p>
+</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">主瓣的形状</p>
+<p>对于同一个30点的DFT，若 <span class="arithmatex">\(x_1(n)\)</span> 有30个有效点，<span class="arithmatex">\(x_2(n)\)</span> 有20个有效点，则需要补0至30个点，但补0并不会改变波的形状</p>
 </div>
 <hr>
-<details class="success">
-<summary>利用窗函数法设计FIRDF的步骤</summary>
+<h2 id="_4">频率分辨率<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310104803.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="频率分辨率" src="https://img.heeeqkblog.dpdns.org/20260310104803.png"></a></p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310105017.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="模拟图" src="https://img.heeeqkblog.dpdns.org/20260310105017.png"></a></p>
 <ul>
-<li>（1）    </li>
-<li>（2）  </li>
-<li>（3）  </li>
-<li>（4）  </li>
+<li>N为DFT点数，L为窗长（采样点个数）</li>
 </ul>
-</details>
 <hr>
-<details class="success">
-<summary>利用窗函数法设计FIRDF的步骤</summary>
-<ul>
-<li>（1）    </li>
-<li>（2）  </li>
-<li>（3）  </li>
-<li>（4）  </li>
-</ul>
-</details>
+<h2 id="_5">频域过采样<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<p><strong>概念</strong>：只对加窗后的序列补0，不能提高频率分辨率（并不增加原有序列的频谱信息），但可以减小谱样本的间距</p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260310105520.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="补0" src="https://img.heeeqkblog.dpdns.org/20260310105520.png"></a></p>
+<div class="admonition note">
+<p class="admonition-title">总结</p>
+<p>同时增加窗长(采样点个数)与DFT长度---谱样本间距减小，分别率提高  </p>
+<p>增加DFT长度但窗长不变（补0）---谱样本间距减小，分辨率不变</p>
+</div>
 <hr>
-<details class="success">
-<summary>已知序列 <span class="arithmatex">\(x_n\)</span> 的长度为 M ，并且稳定，写出该序列的（离散时间）傅里叶变换、N点离散傅里叶变换、Z变换公式</summary>
+<h2 id="dftfft">DFT（FFT的误差来源）<a class="headerlink" href="#dftfft" title="Permanent link">¶</a></h2>
 <ul>
 <li>
-<p>（1）DFTF： <span class="arithmatex">\(X(e^{j\omega}) = \text{FT}[x(n)] = \sum_{n=0}^{M-1} x(n)e^{-j\omega n}\)</span>  </p>
+<p>频谱混叠：频谱混叠：若采样频率 <span class="arithmatex">\(F_s\)</span> 不满足采样定理，会在 <span class="arithmatex">\(0.5F_s\)</span> 附近引起频谱混叠，造成频谱分析误差。解决方法是提高采样频率。  </p>
 </li>
 <li>
-<p>（2）DFT：<span class="arithmatex">\(X(k) = \text{DFT}[x(n)]_N = \sum_{n=0}^{M-1} x(n)e^{-j\frac{2\pi}{N}kn}, \quad k = 0,1,2,\dots,N-1\)</span>  </p>
+<p>截断效应：因为 DFT 是一种有限的离散傅立叶变换，因此进行谱分析时，只能对模拟信号截取一部分进行分析。比较截断前后的幅度谱主要有泄露和谱间干扰这两种误差。解决方法是增加观测时间和选择合适的窗函数。  </p>
 </li>
 <li>
-<p>（3）ZT：<span class="arithmatex">\(\text{ZT}[x(n)] = \sum_{n=0}^{M-1} x(n)z^{-n}\)</span>   </p>
+<p>栅栏效应：一般模拟信号的频谱是连续函数，但用 DFT 计算出的频谱是离散谱，每两个采样点之间的频谱值是不知道的，就像被栅栏遮住一样，这种现象被称为栅栏效应。解决方法是增加 DFT 的变换点数。  </p>
 </li>
-<li>（4）三者关系：当 <span class="arithmatex">\(X（z）\)</span> 收敛域包含单位圆时，<span class="arithmatex">\(X(k) = X(z)\bigg|_{z=e^{j\frac{2\pi}{N}k}} = X(e^{j\omega})\bigg|_{\omega=\frac{2\pi}{N}k}\)</span>  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>简述DFT（FFT）对模拟信号进行谱分析的误差来源，并说明如何减小误差</summary>
-<ul>
-<li>（1）频谱混叠：  </li>
-<li>（2）截断效应：  </li>
-<li>（3）栅栏效应：  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>整数因子D抽取的原理方框图以及各模块作用</summary>
-</details>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="D因子抽取" src="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg"></a></p>
-<!-- ---
-??? success "模拟信号数字处理的步骤"
-
-    - （1）    
-    - （2）  
-    - （3）  
-    - （4）   问答模版 --></div>
+</ul></div>
 
 
 
@@ -1149,7 +1351,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: HQK的NBU学习笔记[TODO]">
+          <a href="../cp06/" class="md-footer__link md-footer__link--prev" aria-label="上一页: FFT快速傅里叶算法">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 18V6h2v12zm3.5-6L18 6v12z"/></svg>
@@ -1159,20 +1361,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                HQK的NBU学习笔记[TODO]
+                FFT快速傅里叶算法
               </div>
             </div>
           </a>
         
         
           
-          <a href="cp01/" class="md-footer__link md-footer__link--next" aria-label="下一页: 连续时间信号的采样">
+          <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: HQK的随手记[TODO]">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                连续时间信号的采样
+                HQK的随手记[TODO]
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1210,16 +1412,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.footer", "search.highlight", "navigation.indexes", "navigation.prune", "toc.follow", "navigation.top", "content.code.annotate", "content.tooltips", "search.suggest", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.footer", "search.highlight", "navigation.indexes", "navigation.prune", "toc.follow", "navigation.top", "content.code.annotate", "content.tooltips", "search.suggest", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
         <script src="https://imgbb.com/upload.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

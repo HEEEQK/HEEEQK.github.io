@@ -12,31 +12,31 @@
         <meta name="author" content="HEEEQK">
       
       
-        <link rel="canonical" href="https://HEEEQK.github.io/NBU-NOTEBOOK/DSP/">
+        <link rel="canonical" href="https://HEEEQK.github.io/NBU-NOTEBOOK/DSP/cp06/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../cp05/">
       
       
-        <link rel="next" href="cp01/">
+        <link rel="next" href="../cp07/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>数字信号处理笔记 - HEEEQK's BLOG</title>
+        <title>FFT快速傅里叶算法 - HEEEQK's BLOG</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -61,7 +61,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -78,7 +78,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -87,7 +87,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -106,7 +106,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#fft" class="md-skip">
           跳转至
         </a>
       
@@ -120,7 +120,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="HEEEQK&#39;s BLOG" class="md-header__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
+    <a href="../../.." title="HEEEQK&#39;s BLOG" class="md-header__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数字信号处理笔记
+              FFT快速傅里叶算法
             
           </span>
         </div>
@@ -261,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -283,7 +283,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -303,7 +303,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-tabs__link">
+        <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-tabs__link">
           
   
     
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Chronic%20Study/" class="md-tabs__link">
+        <a href="../../../Chronic%20Study/" class="md-tabs__link">
           
   
     
@@ -343,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -378,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HEEEQK&#39;s BLOG" class="md-nav__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
+    <a href="../../.." title="HEEEQK&#39;s BLOG" class="md-nav__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -439,7 +439,7 @@
         
   
   
-    <a href="../.." class="md-nav__link">
+    <a href="../../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -496,7 +496,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -569,7 +569,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -581,7 +581,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -603,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp01/" class="md-nav__link">
+      <a href="../cp01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp02/" class="md-nav__link">
+      <a href="../cp02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp03/" class="md-nav__link">
+      <a href="../cp03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp04/" class="md-nav__link">
+      <a href="../cp04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp05/" class="md-nav__link">
+      <a href="../cp05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,10 +710,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="cp06/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -723,6 +732,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -735,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cp07/" class="md-nav__link">
+      <a href="../cp07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +804,7 @@
         
   
   
-    <a href="../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-nav__link">
+    <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -843,7 +853,7 @@
         
   
   
-    <a href="../../Chronic%20Study/" class="md-nav__link">
+    <a href="../../../Chronic%20Study/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -894,7 +904,7 @@
         
   
   
-    <a href="../../blog/" class="md-nav__link">
+    <a href="../../../blog/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -936,23 +946,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      复试题检测
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -970,108 +963,10 @@
   
 
 
-<div><h1 id="_1">数字信号处理笔记<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<div><h1 id="fft">FFT快速傅里叶算法<a class="headerlink" href="#fft" title="Permanent link">¶</a></h1>
 <div id="progress-container">
   <div id="progress-bar"></div>
-</div>
-
-<h2 id="_2">复试题检测<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<details class="success">
-<summary>数字信号处理系统相较于模拟信号处理系统有何优缺点</summary>
-<ul>
-<li>优点：<br>
-     （1）灵活性<br>
-     （2）稳定可靠，不存在阻抗匹配问题<br>
-     （3）处理精度高<br>
-     （4）便于加解密<br>
-     （5）便于大规模集成化、小型化<br>
-     （6）便于自动化、多功能化
-     （7）可以实现模拟系统无法实现的复杂处理功能</li>
-</ul>
-<hr>
-<ul>
-<li>缺点：<br>
-     （1）数字系统相较于模拟系统更加复杂<br>
-     （2）无线的模拟量转化为有限的数字量不可避免会引入误差<br>
-     （3）速度与实时性更低<br>
-     （4）一般情况下，功耗与成本更高  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>简述用双线性变换法设计数字低通滤波器的步骤</summary>
-<ul>
-<li>
-<p>（1）确定数字低通滤波器的技术指标：<span class="arithmatex">\(\omega_p\)</span>、<span class="arithmatex">\(\omega_s\)</span>、<span class="arithmatex">\(\alpha_p\)</span>、<span class="arithmatex">\(\alpha_s\)</span>    </p>
-</li>
-<li>
-<p>（2）进行非线性预畸变矫正，将数字滤波器转换成模拟滤波器技术指标：<span class="arithmatex">\(\Omega_{p}=\frac{2}{T}\tan\frac{\omega_{p}}{2},\Omega_{s}=\frac{2}{T}\tan\frac{\omega_{s}}{2}\)</span>  </p>
-</li>
-<li>（3）设计满足指标要求的过度模拟滤波器的系统函数<span class="arithmatex">\(H_a(s)\)</span>  </li>
-<li>（4）将模拟滤波器 <span class="arithmatex">\(H_a(s)\)</span> 从s平面转换到z平面，得到数字滤波器的系统函数<span class="arithmatex">\(H(z)\)</span> ，即得到<span class="arithmatex">\(H\left(z\right)=H_{a}\left(s\right)\vert_{S=\frac{2}{T}\cdot\frac{1-z^{-1}}{1+z^{-1}}}\)</span> ，由于装线性变换法无频谱混叠问题，所以T可以任意取，一般取2  </li>
-</ul>
-</details>
-<hr>
-<div class="admonition success">
-<p class="admonition-title">从 <span class="arithmatex">\(X_M(k)\)</span> 对应的时域有限长序列<span class="arithmatex">\(x_M(n)\)</span> 就是原序列<span class="arithmatex">\(x(n)\)</span>以M为周期做延拓的主值序列</p>
-</div>
-<hr>
-<details class="success">
-<summary>利用窗函数法设计FIRDF的步骤</summary>
-<ul>
-<li>（1）    </li>
-<li>（2）  </li>
-<li>（3）  </li>
-<li>（4）  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>利用窗函数法设计FIRDF的步骤</summary>
-<ul>
-<li>（1）    </li>
-<li>（2）  </li>
-<li>（3）  </li>
-<li>（4）  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>已知序列 <span class="arithmatex">\(x_n\)</span> 的长度为 M ，并且稳定，写出该序列的（离散时间）傅里叶变换、N点离散傅里叶变换、Z变换公式</summary>
-<ul>
-<li>
-<p>（1）DFTF： <span class="arithmatex">\(X(e^{j\omega}) = \text{FT}[x(n)] = \sum_{n=0}^{M-1} x(n)e^{-j\omega n}\)</span>  </p>
-</li>
-<li>
-<p>（2）DFT：<span class="arithmatex">\(X(k) = \text{DFT}[x(n)]_N = \sum_{n=0}^{M-1} x(n)e^{-j\frac{2\pi}{N}kn}, \quad k = 0,1,2,\dots,N-1\)</span>  </p>
-</li>
-<li>
-<p>（3）ZT：<span class="arithmatex">\(\text{ZT}[x(n)] = \sum_{n=0}^{M-1} x(n)z^{-n}\)</span>   </p>
-</li>
-<li>（4）三者关系：当 <span class="arithmatex">\(X（z）\)</span> 收敛域包含单位圆时，<span class="arithmatex">\(X(k) = X(z)\bigg|_{z=e^{j\frac{2\pi}{N}k}} = X(e^{j\omega})\bigg|_{\omega=\frac{2\pi}{N}k}\)</span>  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>简述DFT（FFT）对模拟信号进行谱分析的误差来源，并说明如何减小误差</summary>
-<ul>
-<li>（1）频谱混叠：  </li>
-<li>（2）截断效应：  </li>
-<li>（3）栅栏效应：  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>整数因子D抽取的原理方框图以及各模块作用</summary>
-</details>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="D因子抽取" src="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg"></a></p>
-<!-- ---
-??? success "模拟信号数字处理的步骤"
-
-    - （1）    
-    - （2）  
-    - （3）  
-    - （4）   问答模版 --></div>
+</div></div>
 
 
 
@@ -1149,7 +1044,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: HQK的NBU学习笔记[TODO]">
+          <a href="../cp05/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 离散傅里叶变换DFT、DFS">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 18V6h2v12zm3.5-6L18 6v12z"/></svg>
@@ -1159,20 +1054,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                HQK的NBU学习笔记[TODO]
+                离散傅里叶变换DFT、DFS
               </div>
             </div>
           </a>
         
         
           
-          <a href="cp01/" class="md-footer__link md-footer__link--next" aria-label="下一页: 连续时间信号的采样">
+          <a href="../cp07/" class="md-footer__link md-footer__link--next" aria-label="下一页: DFT的谱分析">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                连续时间信号的采样
+                DFT的谱分析
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1210,16 +1105,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.footer", "search.highlight", "navigation.indexes", "navigation.prune", "toc.follow", "navigation.top", "content.code.annotate", "content.tooltips", "search.suggest", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.footer", "search.highlight", "navigation.indexes", "navigation.prune", "toc.follow", "navigation.top", "content.code.annotate", "content.tooltips", "search.suggest", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="../../javascripts/extra.js"></script>
+        <script src="../../../javascripts/extra.js"></script>
       
         <script src="https://imgbb.com/upload.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
