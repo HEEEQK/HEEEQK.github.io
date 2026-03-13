@@ -629,7 +629,7 @@
         
   
   <span class="md-ellipsis">
-    线性是不变系统的变换分析
+    线性时不变系统的变换分析
     
   </span>
   
@@ -976,17 +976,26 @@
 </div>
 
 <h2 id="_2">复试题检测<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<hr>
+<details class="success">
+<summary>单位冲激响应、阶跃响应、最小相位滤波器</summary>
+<ul>
+<li>（1）单位冲激响应：在系统的初始状态为0的情况下，系统输入<mark class="critic">冲激函数</mark>得到的零状态响应    </li>
+<li>（2）单位阶跃响应：在系统的初始状态为0的情况下，系统输入<mark class="critic">阶跃函数</mark>得到的零状态响应   </li>
+<li>（3）最小相位滤波器：对于全部零极点都位于单位圆内的因果稳定滤波器</li>
+</ul>
+</details>
 <details class="success">
 <summary>数字信号处理系统相较于模拟信号处理系统有何优缺点</summary>
 <ul>
 <li>优点：<br>
      （1）灵活性<br>
-     （2）稳定可靠，不存在阻抗匹配问题<br>
-     （3）处理精度高<br>
+     （2）稳定可靠，<mark class="critic">不存在阻抗匹配问题</mark><br>
+     （3）精度高<br>
      （4）便于加解密<br>
      （5）便于大规模集成化、小型化<br>
      （6）便于自动化、多功能化
-     （7）可以实现模拟系统无法实现的复杂处理功能</li>
+     （7）可以实现特殊滤波功能</li>
 </ul>
 <hr>
 <ul>
@@ -999,7 +1008,7 @@
 </details>
 <hr>
 <details class="success">
-<summary>简述用双线性变换法设计数字低通滤波器的步骤</summary>
+<summary>简述用双线性变换法设计数字低通滤波器的步骤及优缺点</summary>
 <ul>
 <li>
 <p>（1）确定数字低通滤波器的技术指标：<span class="arithmatex">\(\omega_p\)</span>、<span class="arithmatex">\(\omega_s\)</span>、<span class="arithmatex">\(\alpha_p\)</span>、<span class="arithmatex">\(\alpha_s\)</span>    </p>
@@ -1007,34 +1016,72 @@
 <li>
 <p>（2）进行非线性预畸变矫正，将数字滤波器转换成模拟滤波器技术指标：<span class="arithmatex">\(\Omega_{p}=\frac{2}{T}\tan\frac{\omega_{p}}{2},\Omega_{s}=\frac{2}{T}\tan\frac{\omega_{s}}{2}\)</span>  </p>
 </li>
-<li>（3）设计满足指标要求的过度模拟滤波器的系统函数<span class="arithmatex">\(H_a(s)\)</span>  </li>
-<li>（4）将模拟滤波器 <span class="arithmatex">\(H_a(s)\)</span> 从s平面转换到z平面，得到数字滤波器的系统函数<span class="arithmatex">\(H(z)\)</span> ，即得到<span class="arithmatex">\(H\left(z\right)=H_{a}\left(s\right)\vert_{S=\frac{2}{T}\cdot\frac{1-z^{-1}}{1+z^{-1}}}\)</span> ，由于装线性变换法无频谱混叠问题，所以T可以任意取，一般取2  </li>
+<li>
+<p>（3）设计满足指标要求的过度模拟滤波器的系统函数<span class="arithmatex">\(H_a(s)\)</span>  </p>
+</li>
+<li>
+<p>（4）将模拟滤波器 <span class="arithmatex">\(H_a(s)\)</span> 从s平面转换到z平面，得到数字滤波器的系统函数<span class="arithmatex">\(H(z)\)</span> ，即得到<span class="arithmatex">\(H\left(z\right)=H_{a}\left(s\right)\vert_{S=\frac{2}{T}\cdot\frac{1-z^{-1}}{1+z^{-1}}}\)</span> ，由于装线性变换法无频谱混叠问题，所以T可以任意取，一般取2  </p>
+</li>
+<li>
+<p>（5）优点：<mark class="critic">从原理上消除了频谱混叠</mark>  </p>
+</li>
+<li>
+<p>（6）缺点：<mark class="critic">数字频率和模拟频率不在保持线性关系，使得数字滤波器响应不能模仿模拟滤波器的频率响应</mark>  </p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>脉冲响应不变法的思路、优缺点</summary>
+<ul>
+<li>
+<p>（1）脉冲响应不变法一般用于设计低通、带通滤波器，不用于设计高通、带阻<mark class="critic">原因：脉冲响应不变法总是会在 $ ω=π $ 附近发生频率混叠</mark>  </p>
+</li>
+<li>
+<p>（2）设计思路：将模拟滤波器的冲激响应进行等间隔采样，得到数字滤波器的单位冲激响应，即 <span class="arithmatex">\(h(n) = h_a(nT)\)</span> 与 $ H(z) = ZT[h(n)] $  </p>
+</li>
+<li>
+<p>（3）优点：数字滤波器与模拟滤波器之间的关系是线性关系 $ ω = ΩT $  </p>
+</li>
+<li>
+<p>（4）缺点：模拟滤波器一般不是带限的，因此实际上总是存在频谱混叠失真  </p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>脉冲响应不变法的详细做法</summary>
+<ul>
+<li>
+<p>（1）确定数字低通滤波器的技术指标：<span class="arithmatex">\(\omega_p\)</span>、<span class="arithmatex">\(\omega_s\)</span>、<span class="arithmatex">\(\alpha_p\)</span>、<span class="arithmatex">\(\alpha_s\)</span>    </p>
+</li>
+<li>
+<p>（2）将数字滤波器设计指标转化为模拟滤波器指标， $ Ω_p = \frac{ω_p}{T}$ , $ Ω_s = \frac{ω_s}{T}$ ,其中T为采样周期，通带最大衰减和阻带最大衰减分别为 $α_p $ 、$α_s $</p>
+</li>
+<li>
+<p>（3）设计满足指标要求的过渡模拟滤波器的系统函数 <span class="arithmatex">\(H_a(s)\)</span></p>
+</li>
+<li>
+<p>（4）对 $ H_a(s)$ 取拉普拉斯逆变换得到<span class="arithmatex">\(h_a(t)\)</span>  </p>
+</li>
+<li>（5）对 $ h_a(t)$ 进行采样得到数字滤波器单位脉冲响应$ h(n) = h_a(nT)$  </li>
+<li>（6）对 $ h(n) $进行z变换得到数字滤波器系统函数 $ H(z) $</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>利用窗函数法设计FIRDF的步骤</summary>
+<ul>
+<li>（1）根据阻带最小衰减 $α_s $ 选择合适的窗函数类型，根据 <span class="arithmatex">\(ΔB\)</span> 选择窗的长度，写出窗函数的表达式 <span class="arithmatex">\(w(n)\)</span>   </li>
+<li>（2）构造希望逼近的频率响应函数 <span class="arithmatex">\(H_d(e^{jw})\)</span>   </li>
+<li>（3）通过反傅里叶变换求出 $h_d(n) $  </li>
+<li>（4）加窗得到设计结果：$ h(n) = h_d(n)·w(n) $  </li>
 </ul>
 </details>
 <hr>
 <div class="admonition success">
 <p class="admonition-title">从 <span class="arithmatex">\(X_M(k)\)</span> 对应的时域有限长序列<span class="arithmatex">\(x_M(n)\)</span> 就是原序列<span class="arithmatex">\(x(n)\)</span>以M为周期做延拓的主值序列</p>
 </div>
-<hr>
-<details class="success">
-<summary>利用窗函数法设计FIRDF的步骤</summary>
-<ul>
-<li>（1）    </li>
-<li>（2）  </li>
-<li>（3）  </li>
-<li>（4）  </li>
-</ul>
-</details>
-<hr>
-<details class="success">
-<summary>利用窗函数法设计FIRDF的步骤</summary>
-<ul>
-<li>（1）    </li>
-<li>（2）  </li>
-<li>（3）  </li>
-<li>（4）  </li>
-</ul>
-</details>
 <hr>
 <details class="success">
 <summary>已知序列 <span class="arithmatex">\(x_n\)</span> 的长度为 M ，并且稳定，写出该序列的（离散时间）傅里叶变换、N点离散傅里叶变换、Z变换公式</summary>
@@ -1046,9 +1093,14 @@
 <p>（2）DFT：<span class="arithmatex">\(X(k) = \text{DFT}[x(n)]_N = \sum_{n=0}^{M-1} x(n)e^{-j\frac{2\pi}{N}kn}, \quad k = 0,1,2,\dots,N-1\)</span>  </p>
 </li>
 <li>
-<p>（3）ZT：<span class="arithmatex">\(\text{ZT}[x(n)] = \sum_{n=0}^{M-1} x(n)z^{-n}\)</span>   </p>
+<p>（3）ZT：<span class="arithmatex">\(\text{ZT}[x(n)] = \sum_{n=0}^{M-1} x(n)z^{-n}\)</span>  </p>
 </li>
-<li>（4）三者关系：当 <span class="arithmatex">\(X（z）\)</span> 收敛域包含单位圆时，<span class="arithmatex">\(X(k) = X(z)\bigg|_{z=e^{j\frac{2\pi}{N}k}} = X(e^{j\omega})\bigg|_{\omega=\frac{2\pi}{N}k}\)</span>  </li>
+<li>
+<p>（4）三者关系：当 <span class="arithmatex">\(X（z）\)</span> 收敛域包含单位圆时，<span class="arithmatex">\(X(k) = X(z)\bigg|_{z=e^{j\frac{2\pi}{N}k}} = X(e^{j\omega})\bigg|_{\omega=\frac{2\pi}{N}k}\)</span>  </p>
+</li>
+<li>
+<p>（5）总结：DIFT是ZT在单位圆上的<mark class="critic">取值</mark>，条件是收敛域包括单位圆；DFT是DIFT在 [0,2π] 上的<mark class="critic">采样</mark>，是ZT在单位圆上的<mark class="critic">采样</mark></p>
+</li>
 </ul>
 </details>
 <hr>
@@ -1063,8 +1115,193 @@
 <hr>
 <details class="success">
 <summary>整数因子D抽取的原理方框图以及各模块作用</summary>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="D因子抽取" src="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg"></a>   </p>
 </details>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="D因子抽取" src="https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg"></a></p>
+<hr>
+<details class="success">
+<summary>用框图描述模拟信号、时域离散信号、数字信号的关系</summary>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/7584d9c9bf26fcb6a61eee01330c099.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="关系" src="https://img.heeeqkblog.dpdns.org/7584d9c9bf26fcb6a61eee01330c099.jpg"></a>   </p>
+</details>
+<hr>
+<details class="success">
+<summary>无限长脉冲响应滤波器（IIR）和有限长脉冲响应滤波器（FIR）有哪些区别</summary>
+<ul>
+<li>
+<p>（1）性能上：IIR的系统函数极点可以在单位圆内任何位置，因此一般阶数较低，经济高效，但相位是非线性的；FIR有严格相位特性，但极点只能在单位圆内，阶数比较高。  </p>
+</li>
+<li>
+<p>（2）结构上：IIR必须采用递归结构，极点必须在单位圆内，否则系统不稳定；FIR主要采用非递归结构，不存在稳定性问题。  </p>
+</li>
+<li>
+<p>（3）设计工具上：IIR可以借助模拟滤波器成果，计算量小；FIR一般没有封闭形式的设计公式，需要借助计算机编程。  </p>
+</li>
+<li>
+<p>（4）此外，IIR主要用于设计具有片段常数特性的滤波器，如低通、高通、带通、带阻滤波器，脱离不了模拟滤波器的局限性；而FIR较灵活，还可以构成积分器、微分器，或用于巴特沃思、切比雪夫等逼近不可能达到预定指标的情况。  </p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>时域采样定理和频域采样定理的内容</summary>
+<ul>
+<li>（1）时域采样定理：对模拟信号 <span class="arithmatex">\(x_a(t)\)</span> 进行等间隔采样，形成采样信号，理想采样信号的频谱是模拟信号的频谱以采样频率为周期，周期延拓而成。若模拟信号的最高频率 <span class="arithmatex">\(Ω_c\)</span> 与采样频率 <span class="arithmatex">\(Ω_s\)</span> 满足 <span class="arithmatex">\(Ω_s ≥ 2Ω_c\)</span>，那么让理想采样信号通过一个增益为 $ T $ ，截止频率为 $ \frac{Ω_s}{2} $ 的低通滤波器，可以唯一恢复原来的模拟信号，否则会造成频谱混叠现象，导致信号不能恢复。    </li>
+<li>
+<p>（2）在运用时域采样定理的时候，一般要求<span class="arithmatex">\(Ω_s ＞ 2Ω_c\)</span>，因为在最高频率处频谱的大小可能不为0，导致在周期延拓的时候最高频率处发生混叠</p>
+</li>
+<li>
+<p>（3）频域采样定理：如果原序列 <span class="arithmatex">\(x(n)\)</span> 的长度为M，对 <span class="arithmatex">\(X(e^(jw))\)</span> 在频率区间[0,2π]上等间隔采样N点，得到 %X_N(k)%，则仅当采样点数 $ N≥M $ 时，才能有频域采样 %X_N(k)% 恢复 $ x(n)=IDFT[X_n(k)]_N $ ，否则将产生时域混叠失真</p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>利用模拟低通滤波器的理论和设计方法，设计其他模拟滤波器的（高通、带通、带阻）的设计过程</summary>
+<ul>
+<li>
+<p>（1）通过频率变换公式，先将希望设计的滤波器指标转换成相应的低通原型滤波器指标  </p>
+</li>
+<li>
+<p>（2）设计相应的归一化低通系统函数 <span class="arithmatex">\(Q(p)\)</span>  </p>
+</li>
+<li>
+<p>（3）对 <span class="arithmatex">\(Q(p)\)</span>进行频率变换得到希望设计的滤波器系统函数 <span class="arithmatex">\(H_d(s)\)</span></p>
+</li>
+</ul>
+</details>
+<hr>
+<div class="admonition success">
+<p class="admonition-title">最小相位系统是指零点和极点都在单位圆内的系统</p>
+</div>
+<hr>
+<details class="success">
+<summary>FIR系统的数字滤波器的基本网络结构及特点</summary>
+<ul>
+<li>
+<p>（1）直接型（I II）  </p>
+</li>
+<li>
+<p>（2）级联型  </p>
+</li>
+<li>
+<p>（3）频率采样型：方便调整频率响应，对于不同 $h(n) $ 但相同N，除 $ H(k)$ 不同外，其他网络结构相同，但<mark class="critic">难以控制截止频率</mark>，<mark class="critic">直接从频域设计，物理概念清楚，适合窄带滤波设计，此时频率响应只有几个非零值</mark>  </p>
+</li>
+<li>
+<p>（4）线性相位型：相位线性  </p>
+</li>
+<li>
+<p>（5）快速卷积型：计算量最小  </p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>IIR系统的数字滤波器的基本网络结构及 特点</summary>
+<ul>
+<li>
+<p>（1）直接型（I II）  </p>
+</li>
+<li>
+<p>（2）级联型：便于零极点调整  </p>
+</li>
+<li>
+<p>（3）并联型：便于极点调整，但不便于零点调整，<mark class="critic">输出时延最短</mark>  </p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>如何选择窗函数类型</summary>
+<ul>
+<li>
+<p>（1）在保证阻带最小衰减的情况下，选择过渡带宽最小的窗  </p>
+</li>
+<li>
+<p>（2）主瓣宽度要窄，已获得比较陡的过渡带  </p>
+</li>
+<li>
+<p>（3）相较于主瓣幅度，旁瓣幅度小尽可能小，使能量集中在主瓣，减小肩峰和余振，提高阻带衰减<mark class="critic">（优化窗函数、等波纹逼近等途径降低窗的旁瓣电平）</mark>和通带平稳性  </p>
+</li>
+<li>
+<p>（4）窗长越长（N），过渡带宽越小  </p>
+</li>
+<li>
+<p>（5）窗的通带衰减、阻带衰减以及在N一定的情况下，过渡带宽的大小均由窗的类型决定  </p>
+</li>
+<li>
+<p>（6）若数字滤波器是严格线性相位，则滤波器的单位脉冲响应是<mark class="critic">偶对称</mark>的，即 <span class="arithmatex">\(h(n)=h(N-1-n)\)</span>  </p>
+</li>
+<li>
+<p>（6）若数字滤波器是广义线性相位，则滤波器的单位脉冲响应是<mark class="critic">奇对称</mark>的，即 <span class="arithmatex">\(h(n)=-h(N-1-n)\)</span>  </p>
+</li>
+</ul>
+</details>
+<hr>
+<div class="admonition success">
+<p class="admonition-title">采样信号恢复成模拟信号，利用的是模拟信号的相关性，要求模拟信号频带有限，而白噪声由于频带无线，所以无法恢复</p>
+</div>
+<hr>
+<details class="success">
+<summary>DFT频谱分析时，提高频率分辨率的方法</summary>
+<ul>
+<li>增大截取信号的持续时间来提高频谱分辨率，即（1）：给定采样频率，增加采样点数；（2）：给定采样点数，降低采样频率（在满足采样定理的条件下）  </li>
+<li>原理： <span class="arithmatex">\(ΔF = \frac{f_s}{N}\)</span>  </li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>零极点分布对系统幅频特性的影响</summary>
+<ul>
+<li>
+<p>（1）极点影响幅频特性的<mark class="critic">峰值</mark>，峰值频率在极点的附近；极点越靠近单位圆，峰值越高，越尖锐；极点在单位圆上，峰值幅度为无穷，系统不稳定  </p>
+</li>
+<li>
+<p>（2）零点影响幅频特性的<mark class="critic">谷值</mark>，谷值频率在零点的附近；零点越靠近单位圆，谷值越接近零；零点在单位圆上，谷值为零  </p>
+</li>
+<li>
+<p>（3）<mark class="critic">处于坐标原点的零极点不影响幅频特性</mark>  </p>
+</li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>设 <span class="arithmatex">\(X(e^{(jw)})\)</span>与 <span class="arithmatex">\(Y(e^{(jw)})\)</span>  是序列 <span class="arithmatex">\(x(n)\)</span> 与 <span class="arithmatex">\(y(n)\)</span> 的傅里叶变换，且均为实函数，尝试使用一次傅里叶反变换求出 <span class="arithmatex">\(x(n)\)</span> 和 <span class="arithmatex">\(y(n)\)</span></summary>
+<ul>
+<li>（1）<span class="arithmatex">\(Z\left(e^{j\omega}\right)=X\left(e^{j\omega}\right)+jY\left(e^{j\omega}\right)\)</span></li>
+<li>（2）<span class="arithmatex">\(Z\left(e^{j\omega}\right)=X\left(e^{j\omega}\right)+jY\left(e^{j\omega}\right)\)</span></li>
+<li>（3）<span class="arithmatex">\(=x(n)+jy(n)=z_{ep}(n)+z_{op}(n)\)</span></li>
+<li>（4）<span class="arithmatex">\(x(n)=IDTFT\left[X\left(e^{j\omega}\right)\right]=z_{ep}(n)=\frac{1}{2}\left[z(n)+z^{\ast}(-n)\right]\)</span></li>
+<li>（5）<span class="arithmatex">\(y(n)=IDTFT\left[Y\left(e^{j\omega}\right)\right]=-jz_{op}(n)=\frac{1}{j2}\left[z(n)-z^{\ast}(-n)\right]\)</span></li>
+</ul>
+</details>
+<hr>
+<details class="success">
+<summary>DFT/FFT运算框图</summary>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/5265b01a473f7a9b3a802eae5e11232.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="DFT/FFT框图" src="https://img.heeeqkblog.dpdns.org/5265b01a473f7a9b3a802eae5e11232.jpg"></a></p>
+</details>
+<hr>
+<details class="success">
+<summary>DFT与FFT运算次数</summary>
+<ul>
+<li>
+<p>（1）DFT复数乘法：$ \N*N$</p>
+</li>
+<li>
+<p>（2）DFT复数加法：$ N*(N-1)$  </p>
+</li>
+<li>
+<p>（3）FFT复数乘法：$ \frac{N}{2}log_2(N)$</p>
+</li>
+<li>
+<p>（4）FFT复数加法：$ Nlog_2(N)$  </p>
+</li>
+<li>
+<p>（5）复数乘法=4实数乘+2实数加  </p>
+</li>
+<li>
+<p>（6）复数加法=2实数加  </p>
+</li>
+</ul>
+</details>
 <!-- ---
 ??? success "模拟信号数字处理的步骤"
 
