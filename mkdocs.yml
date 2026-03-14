@@ -30,7 +30,7 @@ theme:
   palette:
   - media: "(prefers-color-scheme: light)" # 浅色
     scheme: default
-    primary: light green
+    primary: light blue
     accent: orange
     toggle:
       icon: material/lightbulb-variant
@@ -83,6 +83,10 @@ plugins:
         - zh  # 中文搜索支持
       separator: '[\s\u200b\-]' # 分隔符
   - tags # 标签功能 插件
+
+  - mermaid2:
+      version: 10.2.4  #图表插件
+
   - glightbox: # 图片灯箱
       skip_classes:
           - custom-skip-class-name
@@ -165,6 +169,7 @@ markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.caret
   - footnotes
+
   
   - pymdownx.betterem:     # 改进的强调
       smart_enable: all
@@ -198,12 +203,12 @@ extra:
           name: This page was helpful
           data: 1
           note: >-
-           O(∩_∩)O谢谢啦~
+           感谢欣赏~
         - icon: material/thumb-down-outline
           name: This page could be improved
           data: 0
           note: >- 
-            嘿呀嘿呀，努力搬砖...
+            嘿！要继续努力呀...
   javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
     - javascripts/extra.js
@@ -260,13 +265,30 @@ nav:
         - NBU-NOTEBOOK/DSP/cp05.md
         - NBU-NOTEBOOK/DSP/cp06.md
         - NBU-NOTEBOOK/DSP/cp07.md
+      - 通信原理笔记:
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/index.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc01.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc02.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc03.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc04.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc05.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc06.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc07.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc08.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc09.md
+        - NBU-NOTEBOOK/PrinciplesOfCommunication/poc10.md
+
+
+
+
+
       # - 概率论笔记:
-      #   - NBU-NOTEBOOK/probabilityTheory/index.md
-      #   - NBU-NOTEBOOK/probabilityTheory/PT01.md
-      #   - NBU-NOTEBOOK/probabilityTheory/PT02.md
-      #   - NBU-NOTEBOOK/probabilityTheory/PT03.md
-      #   - NBU-NOTEBOOK/probabilityTheory/PT04.md
-      #   - NBU-NOTEBOOK/probabilityTheory/PT05.md
+      #   - NBU-NOTEBOOK/PrinciplesOfCommunication/index.md
+      #   - NBU-NOTEBOOK/PrinciplesOfCommunication/PT01.md
+      #   - NBU-NOTEBOOK/PrinciplesOfCommunication/PT02.md
+      #   - NBU-NOTEBOOK/PrinciplesOfCommunication/PT03.md
+      #   - NBU-NOTEBOOK/PrinciplesOfCommunication/PT04.md
+      #   - NBU-NOTEBOOK/PrinciplesOfCommunication/PT05.md
 
   - 随手记:
       - 随手记/index.md

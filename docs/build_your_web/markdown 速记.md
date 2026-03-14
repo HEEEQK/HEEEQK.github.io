@@ -72,9 +72,9 @@
     ***[链接名称](链接地址 "悬停label")***
     <直链>
     ```
-    ***<u>[博客地址](https://dixilog.github.io/ "my blog")</u>***
+    ***<u>[博客地址](https://heeeqk.github.io/ "my blog")</u>***
 
-    <https://dixilog.github.io>
+    <https://heeeqk.github.io>
 
 === "图片"
 
@@ -238,6 +238,36 @@ dixi
         这里是danger块
 
 ---
+
+
+### 框图
+基于Mermaid图标工具，支持多种图表  
+    ***<u>[在线使用](https://mermaid-live.nodejs.cn/ "Mermaid 在线编辑器")</u>***  
+
+```text title="流程图 Flow chart"
+    ``` mermaid
+    flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+    ```
+```
+
+``` mermaid
+flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+
+
+---  
+
 
 ## 目录生成
 ```text title="就一行"
