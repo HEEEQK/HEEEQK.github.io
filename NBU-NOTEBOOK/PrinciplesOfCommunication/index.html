@@ -12,31 +12,31 @@
         <meta name="author" content="HEEEQK">
       
       
-        <link rel="canonical" href="https://HEEEQK.github.io/NBU-NOTEBOOK/DSP/cp02/">
+        <link rel="canonical" href="https://HEEEQK.github.io/NBU-NOTEBOOK/PrinciplesOfCommunication/">
       
       
-        <link rel="prev" href="../cp01/">
+        <link rel="prev" href="../DSP/cp07/">
       
       
-        <link rel="next" href="../cp03/">
+        <link rel="next" href="poc01/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../../feed_rss_updated.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS 订阅" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="已更新内容的 RSS 订阅" href="../../feed_rss_updated.xml">
       
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>线性时不变系统的变换分析 - HEEEQK's BLOG</title>
+        <title>通信原理笔记 - HEEEQK's BLOG</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -61,7 +61,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -78,7 +78,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -87,7 +87,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -120,7 +120,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="HEEEQK&#39;s BLOG" class="md-header__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
+    <a href="../.." title="HEEEQK&#39;s BLOG" class="md-header__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              线性时不变系统的变换分析
+              通信原理笔记
             
           </span>
         </div>
@@ -261,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -283,7 +283,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -303,7 +303,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-tabs__link">
+        <a href="../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-tabs__link">
           
   
     
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Chronic%20Study/" class="md-tabs__link">
+        <a href="../../Chronic%20Study/" class="md-tabs__link">
           
   
     
@@ -343,7 +343,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
     
@@ -378,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="HEEEQK&#39;s BLOG" class="md-nav__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
+    <a href="../.." title="HEEEQK&#39;s BLOG" class="md-nav__button md-logo" aria-label="HEEEQK's BLOG" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -439,7 +439,7 @@
         
   
   
-    <a href="../../.." class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -498,7 +498,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -529,6 +529,70 @@
                 
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../DSP/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    数字信号处理笔记
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -538,6 +602,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -566,16 +636,16 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
-    数字信号处理笔记
+    通信原理笔记
     
   </span>
   
@@ -583,16 +653,16 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            数字信号处理笔记
+            通信原理笔记
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -605,65 +675,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp01/" class="md-nav__link">
+      <a href="poc01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    连续时间信号的采样
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    线性时不变系统的变换分析
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cp03/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    离散时间系统结构
+    通信系统的组成
     
   </span>
   
@@ -681,11 +697,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp04/" class="md-nav__link">
+      <a href="poc02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    离散时间滤波器
+    信息度量及其信道容量
     
   </span>
   
@@ -703,11 +719,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp05/" class="md-nav__link">
+      <a href="poc03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    离散傅里叶变换DFT、DFS
+    确知信号和随机信号
     
   </span>
   
@@ -725,11 +741,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp06/" class="md-nav__link">
+      <a href="poc04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    FFT快速傅里叶算法
+    模拟信号调制
     
   </span>
   
@@ -747,11 +763,121 @@
   
   
     <li class="md-nav__item">
-      <a href="../cp07/" class="md-nav__link">
+      <a href="poc05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    DFT的谱分析
+    模拟信号数字化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字基带传输系统
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字频带传输系统
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    差错控制编码
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字信号的最佳接收
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    同步原理
     
   </span>
   
@@ -764,76 +890,6 @@
             
           </ul>
         </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../PrinciplesOfCommunication/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    通信原理笔记
-    
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
       
     </li>
   
@@ -876,7 +932,7 @@
         
   
   
-    <a href="../../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-nav__link">
+    <a href="../../%E9%9A%8F%E6%89%8B%E8%AE%B0/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -925,7 +981,7 @@
         
   
   
-    <a href="../../../Chronic%20Study/" class="md-nav__link">
+    <a href="../../Chronic%20Study/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -976,7 +1032,7 @@
         
   
   
-    <a href="../../../blog/" class="md-nav__link">
+    <a href="../../blog/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -1018,6 +1074,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础知识
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1035,10 +1108,137 @@
   
 
 
-<div><h1 id="_1">线性时不变系统的变换分析<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<div><h1 id="_1">通信原理笔记<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <div id="progress-container">
   <div id="progress-bar"></div>
-</div></div>
+</div>
+
+<hr>
+<p>参考文件：<strong><em><u><a href="https://pan.baidu.com/s/1DuYYml6_Mj1zB4mTmBy3OA?pwd=yyds" title="参考文件">参考文件</a></u></em></strong>  </p>
+<p>参考视频：<strong><em><u><a href="https://www.bilibili.com/video/BV1VwUhBAEXu/" title="参考视频">参考视频</a></u></em></strong></p>
+<hr>
+<h3 id="_2">基础知识<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<details class="tip">
+<summary>通信、消息、信息、信号</summary>
+<ul>
+<li>通信：信息的传输和交换，目的是传输消息</li>
+<li>消息：通信中传输的文字、语言、图像等</li>
+<li>信息：消息中有意义的内容</li>
+<li>信号：消息的物理载体，比如点信号</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>模拟通信与数字通信</summary>
+<ul>
+<li>模拟通信：信道中传输的信号是模拟信号<mark class="critic">（幅度连续，时间既可以是连续的，也可以是离散的）</mark></li>
+<li>数字通信：信道中传输的信号是数字信号<mark class="critic">（幅度、时间均离散）</mark></li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>有关信息的基本常识</summary>
+<ul>
+<li>消息中所包含的信息量与消息发生的概率密切相关，而与消息的种类和重要程度无关</li>
+<li>不同形式的消息可以包含相同的信息</li>
+<li>消息出现的概率越小，所包含的信息量就越大，消息出现的概率越大，所包含的信息量就越小，当消息出现的概率为1时，信息量为0（“太阳从东方升起”一定会出现，所以不含信息量）</li>
+<li>若干个互相独立事件构成的消息，所含信息量等于各独立事件信息量之和</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>确知信号与随机信号</summary>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>定义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>确知信号</td>
+<td>可以预先知道其变化规律的信号<br>在定义域的任意时刻都有确定的函数值</td>
+<td>振幅、频率和相位都确定的正弦波 <span class="arithmatex">\(A\cos(\omega t + \varphi)\)</span></td>
+</tr>
+<tr>
+<td>随机信号</td>
+<td>不可以预先知道其变化规律的信号<br>在定义域的任意时刻没有确定的函数值</td>
+<td>高斯白噪声</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr>
+<details class="tip">
+<summary>为什么一般研究的都是广义平稳随机过程</summary>
+<ul>
+<li>平稳随机过程：随机过程的统计特性与时间起点无关</li>
+<li>广义平稳随机过程：只限制一阶距（均值）与二阶距（方差）</li>
+<li>严平稳随机过程：任意有限维概率密度函数与时间起点无关： <span class="arithmatex">\(P(X_{t_1}=x_1,X_{t_2}=x_2,\cdots,X_{t_k}=x_k)=P(X_{t_1+h}=x_1,X_{t_2+h}=x_2,\cdots,X_{t_k+h}=x_k)\)</span></li>
+<li>通信系统中所遇到的信号以及噪声大都可视为宽平稳</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>电磁波在无线信道中的传播途径</summary>
+<ul>
+<li>天波：</li>
+<li>地波：</li>
+<li>视线传播：</li>
+<li>散射：</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>有限信道种类</summary>
+<ul>
+<li>传输电信号：明线、对称电缆（双绞线）、同轴电缆</li>
+<li>传输光信号：单模光纤（只有一条光传播的路径）与多模光纤（多条光传播的路径）</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>多径效应</summary>
+<p>信号通过多条路径达到接收端，每条路径由于长度（导致的时延）和衰落随时间变化，则会导致多径传播现象，多径传播对信号的影响称为多径效应</p>
+</details>
+<hr>
+<details class="tip">
+<summary>衰落？快/慢衰落？</summary>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>定义/产生原因</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>衰落</strong></td>
+<td>信号在传输中因多径、遮挡、环境变化等导致<mark class="critic">幅度、相位、功率随机起伏</mark>的现象</td>
+<td><mark class="critic">信号包络</mark>不稳定，时大时小</td>
+</tr>
+<tr>
+<td><strong>快衰落</strong></td>
+<td>由<mark class="critic">多径效应</mark>引起，信号经过多条路径叠加，包络快速波动</td>
+<td>1. 衰落速率快，周期短<br>2. 与<mark class="critic">多径时延</mark>有关<br>3. 幅度服从<mark class="critic">瑞利分布</mark></td>
+</tr>
+<tr>
+<td><strong>慢衰落</strong></td>
+<td>由<mark class="critic">阴影效应、距离衰减、环境缓慢变化</mark>引起，信号均值缓慢变化</td>
+<td>1. 衰落速率慢，周期长<br>2. 与<mark class="critic">移动速度、障碍物</mark>有关<br>3. 均值服从<mark class="critic">对数正态分布</mark></td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr>
+<details class="tip">
+<summary>热噪声</summary>
+<p>热噪声是电子器件（如电阻、半导体）内部电荷载流子（通常是电子）的随机热运动所产生的一种电噪声。它是通信系统和电子电路中最基本、最普遍存在的噪声源，也是一种白噪声。</p>
+</details>
+<hr></div>
 
 
 
@@ -1116,7 +1316,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../cp01/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 连续时间信号的采样">
+          <a href="../DSP/cp07/" class="md-footer__link md-footer__link--prev" aria-label="上一页: DFT的谱分析">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 18V6h2v12zm3.5-6L18 6v12z"/></svg>
@@ -1126,20 +1326,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                连续时间信号的采样
+                DFT的谱分析
               </div>
             </div>
           </a>
         
         
           
-          <a href="../cp03/" class="md-footer__link md-footer__link--next" aria-label="下一页: 离散时间系统结构">
+          <a href="poc01/" class="md-footer__link md-footer__link--next" aria-label="下一页: 通信系统的组成">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                离散时间系统结构
+                通信系统的组成
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1177,16 +1377,16 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.footer", "search.highlight", "navigation.indexes", "navigation.prune", "toc.follow", "navigation.top", "content.code.annotate", "content.tooltips", "search.suggest", "search.share", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.footer", "search.highlight", "navigation.indexes", "navigation.prune", "toc.follow", "navigation.top", "content.code.annotate", "content.tooltips", "search.suggest", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
         <script src="https://imgbb.com/upload.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
