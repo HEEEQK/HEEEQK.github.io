@@ -217,3 +217,11 @@
 
 !!! tip "有关白噪声"
     白噪声实际上并不真实存在，在工程上，只要噪声的功率谱密度均匀分布的范围远远大于通信系统的工作频带，就可以把它视为白噪声
+
+
+## 例题
+??? success "有关自相关函数与功率谱密度的计算"
+    ![题目1](https://img.heeeqkblog.dpdns.org/20260316094019.png)  
+    ![答案1](https://img.heeeqkblog.dpdns.org/20260316094122.png)  
+    - 第一题的另一种解答：（不知对错，仅作参考）  
+    ![作法](https://img.heeeqkblog.dpdns.org/3c171eb638348f82efab9b7fbc328f4.jpg)
