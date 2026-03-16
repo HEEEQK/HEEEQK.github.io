@@ -25,7 +25,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt   # 关键修改：从 requirements.txt 安装所有依赖
+          pip install -r requirements.txt      # 关键修改：从 requirements.txt 安装所有依赖
+          pip install mkdocs-mermaid2-plugin  # 👈 只添加了这一行
 
       - name: Build site
         run: mkdocs build
