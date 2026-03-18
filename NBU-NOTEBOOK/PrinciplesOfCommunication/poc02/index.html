@@ -61,6 +61,10 @@
       
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1442,33 +1446,17 @@
 <h2 id="_9">信道容量<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
 <hr>
 <h3 id="_10">信道分类<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>定义</th>
-<th>分类及性质</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>狭义信道</strong></td>
-<td>各种物理传输媒介</td>
-<td>分为<mark class="critic">有线信道</mark>和<mark class="critic">无线信道</mark></td>
-</tr>
-<tr>
-<td><strong>广义信道</strong></td>
-<td>信道范围扩大后（传输媒介、发送和接收设备）<br>的信道</td>
-<td>分为<mark class="critic">调制信道</mark>和<mark class="critic">编码信道</mark></td>
-</tr>
-<tr>
-<td><strong>调制信道</strong></td>
-<td>发送端调制器输出端到接收端解调器输入端</td>
-<td>分为<mark class="critic">恒参信道</mark>和<mark class="critic">随参信道</mark><br><span class="arithmatex">\(e_0(t) = k(t) \cdot e_i(t) + n(t)\)</span><br><span class="arithmatex">\(k(t)\)</span>：乘性干扰<br><span class="arithmatex">\(n(t)\)</span>：加性干扰</td>
-</tr>
-</tbody>
-</table>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315140943.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="信道分类" src="https://img.heeeqkblog.dpdns.org/20260315140943.png"></a>  </p>
+<center>
+
+| 名称 | 定义 | 分类及性质 |
+| ---- | ---- | ---------- |
+| **狭义信道** | 各种物理传输媒介 | 分为<mark class="critic">有线信道</mark>和<mark class="critic">无线信道</mark> |
+| **广义信道** | 信道范围扩大后（传输媒介、发送和接收设备）<br>的信道 | 分为<mark class="critic">调制信道</mark>和<mark class="critic">编码信道</mark> |
+| **调制信道** | 发送端调制器输出端到接收端解调器输入端 | 分为<mark class="critic">恒参信道</mark>和<mark class="critic">随参信道</mark><br>$e_0(t) = k(t) \cdot e_i(t) + n(t)$<br>$k(t)$：乘性干扰<br>$n(t)$：加性干扰 |
+
+</center>
+
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315140943.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="信道分类" class="center" src="https://img.heeeqkblog.dpdns.org/20260315140943.png"></a></p>
 <hr>
 <h3 id="_11">香农公式<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <p>假设连续信道的带宽为 <span class="arithmatex">\(B(HZ)\)</span>，信道输出的信号功率 <span class="arithmatex">\(S(W)\)</span> 及输出加性带限高斯白噪声功率为 <span class="arithmatex">\(N(W)\)</span>，则该信道的信道容量为：  </p>

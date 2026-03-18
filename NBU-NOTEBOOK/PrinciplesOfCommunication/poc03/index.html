@@ -61,6 +61,10 @@
       
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1588,184 +1592,64 @@
 </div>
 <hr>
 <h4 id="_4">帕什瓦尔能量谱和功率谱守恒定理<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315161924.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="帕什瓦尔能量谱和功率谱守恒定理" src="https://img.heeeqkblog.dpdns.org/20260315161924.png"></a>  </p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315161924.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="帕什瓦尔能量谱和功率谱守恒定理" class="center" src="https://img.heeeqkblog.dpdns.org/20260315161924.png"></a></p>
 <hr>
 <h4 id="_5">能量密度与功率谱密度<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315162042.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="能量密度与功率谱密度" src="https://img.heeeqkblog.dpdns.org/20260315162042.png"></a>  </p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315162042.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="能量密度与功率谱密度" class="center" src="https://img.heeeqkblog.dpdns.org/20260315162042.png"></a></p>
 <hr>
 <h2 id="_6">常见信号的傅里叶变换<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th><span class="arithmatex">\(f(t)\)</span></th>
-<th><span class="arithmatex">\(F(\omega)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>单位冲激信号 <span class="arithmatex">\(\delta(t)\)</span></td>
-<td><span class="arithmatex">\(1\)</span></td>
-</tr>
-<tr>
-<td>2</td>
-<td>常数信号 <span class="arithmatex">\(1\)</span></td>
-<td><span class="arithmatex">\(2\pi\delta(\omega)\)</span></td>
-</tr>
-<tr>
-<td>3</td>
-<td>单位阶跃信号 <span class="arithmatex">\(u(t)\)</span></td>
-<td><span class="arithmatex">\(\pi\delta(\omega) + \frac{1}{j\omega}\)</span></td>
-</tr>
-<tr>
-<td>4</td>
-<td><span class="arithmatex">\(\text{sgn}(t)\)</span></td>
-<td><span class="arithmatex">\(\frac{2}{j\omega}\)</span></td>
-</tr>
-<tr>
-<td>5</td>
-<td><span class="arithmatex">\(\frac{1}{\pi t}\)</span>（非常常见！）</td>
-<td><span class="arithmatex">\(-j\text{sgn}(\omega)\)</span></td>
-</tr>
-<tr>
-<td>6</td>
-<td>单边指数信号 <span class="arithmatex">\(e^{-\alpha t}u(t)\)</span>（<span class="arithmatex">\(\alpha\)</span> 为大于零的实数）</td>
-<td><span class="arithmatex">\(\frac{1}{j\omega + \alpha}\)</span></td>
-</tr>
-<tr>
-<td>7</td>
-<td>门函数 <span class="arithmatex">\(EG_\tau(t)\)</span>（<span class="arithmatex">\(G\)</span> 为 Gate 的缩写，代表门函数）</td>
-<td><span class="arithmatex">\(E\tau\text{Sa}\left(\frac{\tau}{2}\omega\right)\)</span></td>
-</tr>
-<tr>
-<td>8</td>
-<td><span class="arithmatex">\(E\text{tri}_\tau(t)\)</span>（<span class="arithmatex">\(\text{tri}\)</span> 为 triangle 的缩写，代表三角形）</td>
-<td><span class="arithmatex">\(\frac{E\tau}{2}\text{Sa}^2\left(\frac{\omega\tau}{4}\right)\)</span></td>
-</tr>
-<tr>
-<td>9</td>
-<td><span class="arithmatex">\(E\tau\text{Sa}\left(\frac{t\tau}{2}\right)\)</span></td>
-<td><span class="arithmatex">\(2\pi EG_\tau(\omega)\)</span></td>
-</tr>
-<tr>
-<td>10</td>
-<td><span class="arithmatex">\(\frac{E\tau}{2}\text{Sa}^2\left(\frac{t\tau}{4}\right)\)</span></td>
-<td><span class="arithmatex">\(2\pi E\text{tri}_\tau(\omega)\)</span></td>
-</tr>
-<tr>
-<td>11</td>
-<td>抽样函数信号 <span class="arithmatex">\(\text{Sa}(\omega_0 t) = \frac{\sin(\omega_0 t)}{\omega_0 t}\)</span></td>
-<td><span class="arithmatex">\(\frac{\pi}{\omega_0}G_{2\omega_0}(\omega)\)</span></td>
-</tr>
-<tr>
-<td>12</td>
-<td><span class="arithmatex">\(e^{j\omega_0 t}\)</span></td>
-<td><span class="arithmatex">\(2\pi\delta(\omega - \omega_0)\)</span></td>
-</tr>
-<tr>
-<td>13</td>
-<td><span class="arithmatex">\(\frac{1}{\pi t}\)</span>（非常常见！）</td>
-<td><span class="arithmatex">\(-j\text{sgn}(\omega)\)</span></td>
-</tr>
-<tr>
-<td>14</td>
-<td>周期冲激序列 <span class="arithmatex">\(\sum_{n=-\infty}^{\infty}\delta(t-nT)\)</span><br><span class="arithmatex">\(\sum_{n=-\infty}^{\infty}(-1)^n\delta(t-nT_s)\)</span></td>
-<td><span class="arithmatex">\(\frac{2\pi}{T}\sum_{n=-\infty}^{\infty}\delta\left(\omega - n\frac{2\pi}{T}\right)\)</span><br><span class="arithmatex">\(\frac{2\pi}{T}\sum_{n=-\infty}^{\infty}\delta\left(\omega - n\frac{\pi}{T}\right)\)</span>，<span class="arithmatex">\(n\)</span> 为奇数</td>
-</tr>
-<tr>
-<td>15</td>
-<td>余弦信号 <span class="arithmatex">\(\cos\omega_0 t\)</span></td>
-<td><span class="arithmatex">\(\pi\left[\delta(\omega + \omega_0) + \delta(\omega - \omega_0)\right]\)</span></td>
-</tr>
-<tr>
-<td>16</td>
-<td>正弦信号 <span class="arithmatex">\(\sin\omega_0 t\)</span></td>
-<td><span class="arithmatex">\(j\pi\left[\delta(\omega + \omega_0) - \delta(\omega - \omega_0)\right]\)</span></td>
-</tr>
-<tr>
-<td>17</td>
-<td>斜变信号 <span class="arithmatex">\(tu(t)\)</span></td>
-<td><span class="arithmatex">\(j\pi\delta'(\omega) - \frac{1}{\omega^2}\)</span></td>
-</tr>
-<tr>
-<td>18</td>
-<td>单边正弦信号 <span class="arithmatex">\(\sin(\omega_0 t)u(t)\)</span></td>
-<td><span class="arithmatex">\(\frac{j\pi}{2}\left[\delta(\omega + \omega_0) - \delta(\omega - \omega_0)\right] - \frac{\omega_0}{\omega^2 - \omega_0^2}\)</span></td>
-</tr>
-<tr>
-<td>19</td>
-<td>单边余弦信号 <span class="arithmatex">\(\cos(\omega_0 t)u(t)\)</span></td>
-<td><span class="arithmatex">\(\frac{\pi}{2}\left[\delta(\omega + \omega_0) + \delta(\omega - \omega_0)\right] - j\frac{\omega}{\omega^2 - \omega_0^2}\)</span></td>
-</tr>
-<tr>
-<td>20</td>
-<td>周期信号 <span class="arithmatex">\(\sum_{n=-\infty}^{\infty}x_1(t-nT_0)\)</span></td>
-<td><span class="arithmatex">\(\omega_0\sum_{n=-\infty}^{\infty}X_1(jn\omega_0)\delta(\omega - n\omega_0)\)</span></td>
-</tr>
-<tr>
-<td>21</td>
-<td>抽样信号 <span class="arithmatex">\(\sum_{n=-\infty}^{\infty}x(t)\delta(t-nT_s)\)</span></td>
-<td><span class="arithmatex">\(\frac{1}{T_s}\sum_{n=-\infty}^{\infty}X(j(\omega - n\omega_s))\)</span></td>
-</tr>
-<tr>
-<td>22</td>
-<td><span class="arithmatex">\(Ee^{-\left(\frac{t}{\tau}\right)^2}\)</span></td>
-<td><span class="arithmatex">\(\sqrt{\pi}E\tau e^{-\left(\frac{\omega\tau}{2}\right)^2}\)</span></td>
-</tr>
-<tr>
-<td>23</td>
-<td><span class="arithmatex">\(\frac{1}{2}\left[\delta(t-1) + \delta(t+1)\right]\)</span></td>
-<td><span class="arithmatex">\(\cos(\omega)\)</span></td>
-</tr>
-<tr>
-<td>24</td>
-<td><span class="arithmatex">\(t\)</span></td>
-<td><span class="arithmatex">\(j2\pi\delta'(\omega)\)</span></td>
-</tr>
-<tr>
-<td>25</td>
-<td>$</td>
-<td>t</td>
-</tr>
-</tbody>
-</table>
+<center>
+
+| # | $f(t)$ | $F(\omega)$ |
+|---|--------|--------------|
+| 1 | 单位冲激信号 $\delta(t)$ | $1$ |
+| 2 | 常数信号 $1$ | $2\pi\delta(\omega)$ |
+| 3 | 单位阶跃信号 $u(t)$ | $\pi\delta(\omega) + \frac{1}{j\omega}$ |
+| 4 | $\text{sgn}(t)$ | $\frac{2}{j\omega}$ |
+| 5 | $\frac{1}{\pi t}$（非常常见！） | $-j\text{sgn}(\omega)$ |
+| 6 | 单边指数信号 $e^{-\alpha t}u(t)$（$\alpha$ 为大于零的实数） | $\frac{1}{j\omega + \alpha}$ |
+| 7 | 门函数 $EG_\tau(t)$（$G$ 为 Gate 的缩写，代表门函数） | $E\tau\text{Sa}\left(\frac{\tau}{2}\omega\right)$ |
+| 8 | $E\text{tri}_\tau(t)$（$\text{tri}$ 为 triangle 的缩写，代表三角形） | $\frac{E\tau}{2}\text{Sa}^2\left(\frac{\omega\tau}{4}\right)$ |
+| 9 | $E\tau\text{Sa}\left(\frac{t\tau}{2}\right)$ | $2\pi EG_\tau(\omega)$ |
+| 10 | $\frac{E\tau}{2}\text{Sa}^2\left(\frac{t\tau}{4}\right)$ | $2\pi E\text{tri}_\tau(\omega)$ |
+| 11 | 抽样函数信号 $\text{Sa}(\omega_0 t) = \frac{\sin(\omega_0 t)}{\omega_0 t}$ | $\frac{\pi}{\omega_0}G_{2\omega_0}(\omega)$ |
+| 12 | $e^{j\omega_0 t}$ | $2\pi\delta(\omega - \omega_0)$ |
+| 13 | $\frac{1}{\pi t}$（非常常见！） | $-j\text{sgn}(\omega)$ |
+| 14 | 周期冲激序列 $\sum_{n=-\infty}^{\infty}\delta(t-nT)$<br>$\sum_{n=-\infty}^{\infty}(-1)^n\delta(t-nT_s)$ | $\frac{2\pi}{T}\sum_{n=-\infty}^{\infty}\delta\left(\omega - n\frac{2\pi}{T}\right)$<br>$\frac{2\pi}{T}\sum_{n=-\infty}^{\infty}\delta\left(\omega - n\frac{\pi}{T}\right)$，$n$ 为奇数 |
+| 15 | 余弦信号 $\cos\omega_0 t$ | $\pi\left[\delta(\omega + \omega_0) + \delta(\omega - \omega_0)\right]$ |
+| 16 | 正弦信号 $\sin\omega_0 t$ | $j\pi\left[\delta(\omega + \omega_0) - \delta(\omega - \omega_0)\right]$ |
+| 17 | 斜变信号 $tu(t)$ | $j\pi\delta'(\omega) - \frac{1}{\omega^2}$ |
+| 18 | 单边正弦信号 $\sin(\omega_0 t)u(t)$ | $\frac{j\pi}{2}\left[\delta(\omega + \omega_0) - \delta(\omega - \omega_0)\right] - \frac{\omega_0}{\omega^2 - \omega_0^2}$ |
+| 19 | 单边余弦信号 $\cos(\omega_0 t)u(t)$ | $\frac{\pi}{2}\left[\delta(\omega + \omega_0) + \delta(\omega - \omega_0)\right] - j\frac{\omega}{\omega^2 - \omega_0^2}$ |
+| 20 | 周期信号 $\sum_{n=-\infty}^{\infty}x_1(t-nT_0)$ | $\omega_0\sum_{n=-\infty}^{\infty}X_1(jn\omega_0)\delta(\omega - n\omega_0)$ |
+| 21 | 抽样信号 $\sum_{n=-\infty}^{\infty}x(t)\delta(t-nT_s)$ | $\frac{1}{T_s}\sum_{n=-\infty}^{\infty}X(j(\omega - n\omega_s))$ |
+| 22 | $Ee^{-\left(\frac{t}{\tau}\right)^2}$ | $\sqrt{\pi}E\tau e^{-\left(\frac{\omega\tau}{2}\right)^2}$ |
+| 23 | $\frac{1}{2}\left[\delta(t-1) + \delta(t+1)\right]$ | $\cos(\omega)$ |
+| 24 | $t$ | $j2\pi\delta'(\omega)$ |
+| 25 | $|t|$ | $-\frac{2}{\omega^2}$ |
+
+</center>
+
 <h3 id="_7">周期函数<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <p>未添加内容（只记得相当于单个周期函数做傅里叶变换后乘以2π/T，然后做周期延拓）</p>
 <h3 id="_8">相关函数和谱密度的关系<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315162916.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="相关函数和谱密度的关系" src="https://img.heeeqkblog.dpdns.org/20260315162916.png"></a></p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260315162916.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="相关函数和谱密度的关系" class="center" src="https://img.heeeqkblog.dpdns.org/20260315162916.png"></a></p>
 <h2 id="_9">随机信号<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">详情见《随机信号分析》一书</p>
 </div>
 <hr>
 <h3 id="_10">广义平稳和严平稳<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>定义</th>
-<th>性质</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>严平稳</td>
-<td>随机过程 <span class="arithmatex">\(\xi(t)\)</span> 的任意 <span class="arithmatex">\(n\)</span> 维分布与时间起点无关</td>
-<td><mark class="critic">一维分布与时间 <span class="arithmatex">\(t\)</span> 无关</mark>；<mark class="critic">二维分布只与时间间隔 <span class="arithmatex">\(\tau\)</span> 有关</mark></td>
-</tr>
-<tr>
-<td>广义平稳</td>
-<td><span class="arithmatex">\(a(t) = a\)</span><br><span class="arithmatex">\(R(t_1, t_1 + \tau) = R(\tau)\)</span></td>
-<td>数学期望是个常数，与时间 <span class="arithmatex">\(t\)</span> 无关；自相关函数只与时间间隔 <span class="arithmatex">\(\tau\)</span> 有关</td>
-</tr>
-<tr>
-<td>二者比较</td>
-<td>严平稳（或狭义平稳）一定是广义平稳，反之不一定</td>
-<td>—</td>
-</tr>
-</tbody>
-</table>
+<center>
+
+| 名称     | 定义                                                                 | 性质                                                                 |
+|----------|----------------------------------------------------------------------|----------------------------------------------------------------------|
+| 严平稳   | 随机过程 $\xi(t)$ 的任意 $n$ 维分布与时间起点无关                     | <mark class="critic">一维分布与时间 $t$ 无关</mark>；<mark class="critic">二维分布只与时间间隔 $\tau$ 有关</mark>             |
+| 广义平稳 | $a(t) = a$<br>$R(t_1, t_1 + \tau) = R(\tau)$                          | 数学期望是个常数，与时间 $t$ 无关；自相关函数只与时间间隔 $\tau$ 有关 |
+| 二者比较 | 严平稳（或狭义平稳）一定是广义平稳，反之不一定                         | —                                                                    |  
+
+</center>
+
 <hr>
 <h3 id="_11">各态历经性<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
 <ul>
@@ -1806,36 +1690,18 @@
 </div>
 </div>
 <h3 id="_13">自相关函数的性质<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>性质</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="arithmatex">\(R(0) = E[\xi^2(t)]\)</span></td>
-<td><span class="arithmatex">\(\xi(t)\)</span> 的平均功率</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(R(\tau) = R(-\tau)\)</span></td>
-<td>偶函数</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(\|R(\tau)\| \le R(0)\)</span></td>
-<td><span class="arithmatex">\(R(0)\)</span> 是 <span class="arithmatex">\(R(\tau)\)</span> 的上界</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(R(\infty) = E[\xi(t)\xi(t+\infty)] = E^2[\xi(t)] = a^2\)</span></td>
-<td><span class="arithmatex">\(\xi(t)\)</span> 的直流功率</td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(R(0) - R(\infty) = \sigma^2\)</span></td>
-<td><span class="arithmatex">\(\xi(t)\)</span> 的交流功率</td>
-</tr>
-</tbody>
-</table>
+<center>
+
+| 性质 | 含义 |
+|------|------|
+| $R(0) = E[\xi^2(t)]$ | $\xi(t)$ 的平均功率 |
+| $R(\tau) = R(-\tau)$ | 偶函数 |
+| $\|R(\tau)\| \le R(0)$ | $R(0)$ 是 $R(\tau)$ 的上界 |
+| $R(\infty) = E[\xi(t)\xi(t+\infty)] = E^2[\xi(t)] = a^2$ | $\xi(t)$ 的直流功率 |
+| $R(0) - R(\infty) = \sigma^2$ | $\xi(t)$ 的交流功率 |
+
+</center>
+
 <hr>
 <h3 id="_14">随机过程的数字特征<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">均值</label><label for="__tabbed_3_2">方差</label><label for="__tabbed_3_3">协方差与自相关函数</label></div>
@@ -1943,10 +1809,10 @@
 <h2 id="_19">例题<a class="headerlink" href="#_19" title="Permanent link">¶</a></h2>
 <details class="success">
 <summary>有关自相关函数与功率谱密度的计算</summary>
-<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260316094019.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="题目1" src="https://img.heeeqkblog.dpdns.org/20260316094019.png"></a><br>
-<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260316094122.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="答案1" src="https://img.heeeqkblog.dpdns.org/20260316094122.png"></a><br>
-- 第一题的另一种解答：（不知对错，仅作参考）<br>
-<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/3c171eb638348f82efab9b7fbc328f4.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="作法" src="https://img.heeeqkblog.dpdns.org/3c171eb638348f82efab9b7fbc328f4.jpg"></a></p>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260316094019.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="题目1" class="center" src="https://img.heeeqkblog.dpdns.org/20260316094019.png"></a>
+<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260316094122.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="答案1" class="center" src="https://img.heeeqkblog.dpdns.org/20260316094122.png"></a>
+- 第一题的另一种解答：<ins>（不知对错，仅作参考）</ins><br>
+<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/3c171eb638348f82efab9b7fbc328f4.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="作法" class="center" src="https://img.heeeqkblog.dpdns.org/3c171eb638348f82efab9b7fbc328f4.jpg"></a></p>
 </details></div>
 
 
