@@ -9,8 +9,12 @@
 !!! success "概念"
     - 模拟调制分为线性调制和非线性（角度调制）  
     - 线性调制包括AM、DSB、SSB以及VSB  
-    ![滤波法](https://img.heeeqkblog.dpdns.org/20260316151222.png)  
-    ![相移法](https://img.heeeqkblog.dpdns.org/20260316151315.png)  
+    <center>
+    ![滤波法](https://img.heeeqkblog.dpdns.org/20260316151222.png)
+    <center>
+    <center>
+    ![相移法](https://img.heeeqkblog.dpdns.org/20260316151315.png)
+    <center>
     - 非线性调制包括FM与PM（在{==通信电子线路==}中详细介绍）  
 
 ---
