@@ -9,12 +9,8 @@
 !!! success "概念"
     - 模拟调制分为线性调制和非线性（角度调制）  
     - 线性调制包括AM、DSB、SSB以及VSB  
-    <center>
-    ![滤波法](https://img.heeeqkblog.dpdns.org/20260316151222.png)
-    <center>
-    <center>
-    ![相移法](https://img.heeeqkblog.dpdns.org/20260316151315.png)
-    <center>
+    ![滤波法](https://img.heeeqkblog.dpdns.org/20260316151222.png){: .center }
+    ![相移法](https://img.heeeqkblog.dpdns.org/20260316151315.png){: .center }
     - 非线性调制包括FM与PM（在{==通信电子线路==}中详细介绍）  
 
 ---
@@ -22,8 +18,8 @@
 ## 线性调制
 
 !!! tip "线性调制原理"
-    ![线性调制原理](https://img.heeeqkblog.dpdns.org/20260316133953.png)  
-    - 本质：时域上与 $cos(w_ct)$ 相乘，频域上做 $w_c$ 的偏移  
+    ![线性调制原理](https://img.heeeqkblog.dpdns.org/20260316133953.png){: .center }
+    本质：^^时域上与^^ $cos(w_ct)$ ^^相乘，频域上做^^ $w_c$ ^^的偏移^^  
 
 ---
 
@@ -34,12 +30,10 @@
 
 - 频域表达： $S_{\mathrm{AM}}(\omega)=\pi A_{0}[\delta(\omega+\omega_{c})+\delta(\omega-\omega_{c})]+\frac{1}{2}[M(\omega+\omega_{c})+M(\omega-\omega_{c})]$  
 
-- 框图如下：
-<center>
-![AM框图](https://img.heeeqkblog.dpdns.org/20260316133800.png)
-<center>
-- 调制过程波形：
-![AM波形](https://img.heeeqkblog.dpdns.org/20260316134345.png)  
+- 框图如下：  
+![AM框图](https://img.heeeqkblog.dpdns.org/20260316133800.png){: .center }
+- 调制过程波形：  
+![AM波形](https://img.heeeqkblog.dpdns.org/20260316134345.png){: .center }
 
 ---
 
@@ -73,7 +67,7 @@
 - 时域表达： $s_{\mathrm{DSB}}\begin{pmatrix}t\end{pmatrix}=m\begin{pmatrix}t\end{pmatrix}\mathrm{cos}\omega_{\mathrm{c}}t$  
 - 频域表达： $S_{_{\mathrm{DSB}}}(\omega)=\frac{1}{2}[M(\omega+\omega_{_{\mathrm{c}}})+M(\omega-\omega_{_{\mathrm{c}}})]$  
 - 波形：  
-![DSB波形](https://img.heeeqkblog.dpdns.org/20260316140125.png)
+![DSB波形](https://img.heeeqkblog.dpdns.org/20260316140125.png){: .center }
 
 !!! tip "关于DSB"
     - DSB信号解调时需要使用{==相干解调==}
@@ -94,15 +88,12 @@
 
 
 #### 滤波法
-- 框图：
-<center>
-![滤波法框图](https://img.heeeqkblog.dpdns.org/20260316141139.png)
-<center>
+- 框图：  
+![滤波法框图](https://img.heeeqkblog.dpdns.org/20260316141139.png){: .center }
 
-- 频谱图：
-<center>
-![滤波法频谱](https://img.heeeqkblog.dpdns.org/20260316141205.png)
-<center>
+- 频谱图：  
+![滤波法频谱](https://img.heeeqkblog.dpdns.org/20260316141205.png){: .center }
+
 - 难点：{==边带滤波器的制作==}
 
 
@@ -114,14 +105,14 @@
 - 推导：篇幅原因不做详解，详情见《通信原理（第七版）》 樊昌信、曹丽娜编著 P91  
 
 - 框图：
-<center>
-![相移法框图](https://img.heeeqkblog.dpdns.org/20260316141754.png)
-<center>
+
+![相移法框图](https://img.heeeqkblog.dpdns.org/20260316141754.png){: .center }
+
 - 难点：相移网络 $H_h(w)$ 的制作  
 
 - 数字特性：带宽 $B_{\mathrm{SSB}}=f_{\mathrm{H}}$，比AM、DSB减少1/2，并且可以节省发射功率（只发送一个边带）   
 
-!!! tip "关于 $ H_h(w) $ "
+!!! tip "关于 $H_h(w)$ "
     - $H_{_h}(\omega)=\hat{M}(\omega)/M(\omega)=-\mathrm{jsgn}\omega$
     - $H_h(w)$ 称为 ^^希尔伯特滤波器^^
 
@@ -133,7 +124,7 @@
 - 原理：不像SSB中那样完全抑制DSB信号的一个遍地啊，而是逐渐切割，使其残留一小部分  
 
 - 框图对比：
-![DSB SSB VSB对比](https://img.heeeqkblog.dpdns.org/20260316150328.png)  
+![DSB SSB VSB对比](https://img.heeeqkblog.dpdns.org/20260316150328.png){: .center }
 
 - 频谱： $\begin{aligned}S_{\mathrm{VSR}}(\omega)&=S_{\mathrm{DSB}}(\omega)\cdot H(\omega)=\frac{1}{2}\left[M(\omega+\omega_{\mathrm{c}})+M(\omega-\omega_{\mathrm{c}})\right]H(\omega)\end{aligned}$  
 
@@ -143,9 +134,9 @@
 
 #### 相干解调
 - 框图：
-<center>
-![相干解调](https://img.heeeqkblog.dpdns.org/20260316150457.png)
-<center>
+
+![相干解调](https://img.heeeqkblog.dpdns.org/20260316150457.png){: .center }
+
 - 对应频谱：  
     1.  $S_{_p}(\omega)=\left[S_{_\mathrm{VSB}}(\omega+\omega_{_\mathrm{c}})+S_{_\mathrm{VSB}}(\omega-\omega_{_\mathrm{c}})\right]$  
     2.  $\begin{aligned}S_{_p}(\omega)&=\frac{1}{2}\left[M(\omega+2\omega_{\mathrm{e}})+M(\omega)\right]H(\omega+\omega_{\mathrm{e}})+\frac{1}{2}\left[M(\omega)+M(\omega-2\omega_{\mathrm{e}})\right]H(\omega-\omega_{\mathrm{e}})\end{aligned}$  
@@ -155,7 +146,7 @@
 !!! tip "相干解调的条件 "
     - $H(\omega+\omega_{\mathrm{c}})+H(\omega-\omega_{\mathrm{c}})=\text{常数}\quad|\omega|\leqslant\omega_{\mathrm{H}}$
     - 即滤波器的特性 $H(w)$ 在$±w_c$ 处必须具有奇对称（互补对称）的性质
-    ![滤波器性质](https://img.heeeqkblog.dpdns.org/20260316151057.png)
+    ![滤波器性质](https://img.heeeqkblog.dpdns.org/20260316151057.png){: .center }
 
 ---
 
@@ -164,9 +155,9 @@
 ### 包络检波
 - 原理：利用包络检波器直接从已调信号的幅度中提取原始信号，将幅度转化为波形  
 - 框图：
-<center>
-![包络检波器](https://img.heeeqkblog.dpdns.org/20260316152132.png)  
-<center>
+
+![包络检波器](https://img.heeeqkblog.dpdns.org/20260316152132.png){: .center }
+
 - 优势：{==结构简单，解调输出是相干解调输出的两倍==}  
 
 !!! tip "插入载波包络检波法"
@@ -178,11 +169,11 @@
 ### 相干解调
 - 原理：调制与解调实质一样，都是对频谱进行搬移。解调需要将频谱搬回原始基带位置  
 - 框图：
-<center>
-![相干解调](https://img.heeeqkblog.dpdns.org/20260316152702.png)  
-<center>
+
+![相干解调](https://img.heeeqkblog.dpdns.org/20260316152702.png){: .center }
+
 - 原理：  
-![相干解调原理](https://img.heeeqkblog.dpdns.org/20260316152758.png)
+![相干解调原理](https://img.heeeqkblog.dpdns.org/20260316152758.png){: .center }
 
 !!! tip "相干解调的关键"
     接收端需要提供一个与{==载波信号严格同步的相干载波==}
@@ -268,7 +259,7 @@
 ---
 FM与FM波形图：
 
-![FM与FM波形图](https://img.heeeqkblog.dpdns.org/20260316163410.png)  
+![FM与FM波形图](https://img.heeeqkblog.dpdns.org/20260316163410.png){: .center }
 
 ---
 
@@ -282,16 +273,12 @@ FM与FM波形图：
 === "直接调频法"
     - 使用调制信号直接去控制载波振荡器的频率，使其按调频信号的规律线性变化  
     - 锁相环（PLL）调制器框图：
-    <center>
-    ![](https://img.heeeqkblog.dpdns.org/20260316170211.png)
-    <center>
+    ![](https://img.heeeqkblog.dpdns.org/20260316170211.png){: .center }
 
 === "间接调频法"
     - 先将调制信号积分，然后对载波进行调相产生 $NBFM$ 信号，再经过n次倍频器得到 $WBFM$ 信号
     - 实现框图：
-    <center>
-    ![](https://img.heeeqkblog.dpdns.org/20260316170314.png)
-    <center>
+    ![](https://img.heeeqkblog.dpdns.org/20260316170314.png){: .center }
 
 ---
 #### 调频信号的解调
@@ -300,12 +287,12 @@ FM与FM波形图：
 
 === "非相干解调"
     - 使用鉴频器：完成从频率到电压的转化
-    ![调频非相干解调](https://img.heeeqkblog.dpdns.org/20260316171413.png)
+    ![调频非相干解调](https://img.heeeqkblog.dpdns.org/20260316171413.png){: .center }
 
 
 === "相干解调"
     - 由于 $NBFM$ 信号可以分解为同相分量与正交分量之和，所以可以采用线性调制中相干解调
-    ![调频相干解调](https://img.heeeqkblog.dpdns.org/20260316171553.png)
+    ![调频相干解调](https://img.heeeqkblog.dpdns.org/20260316171553.png){: .center }
 
 
 ---
@@ -330,15 +317,13 @@ FM与FM波形图：
 - 去加重：抵消加重网络的影响，使信号不失真
 - 数学公式： $H_{_p}(f)=\frac{1}{H_{_d}(f)}$
 - 框图：
-<center>
-![预加重与去加重](https://img.heeeqkblog.dpdns.org/20260316173331.png)
-<center>
+![预加重与去加重](https://img.heeeqkblog.dpdns.org/20260316173331.png){: .center }
 
 ---
 
 ## 各种调制模拟系统比较
 
-![各种调制模拟系统比较](https://img.heeeqkblog.dpdns.org/20260316173733.png)
+![各种调制模拟系统比较](https://img.heeeqkblog.dpdns.org/20260316173733.png){: .center }
 
 
 ---

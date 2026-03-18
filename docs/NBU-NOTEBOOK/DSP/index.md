@@ -126,14 +126,14 @@
 
 ---
 ??? success "整数因子D抽取的原理方框图以及各模块作用"
-    ![D因子抽取](https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg)   
+    ![D因子抽取](https://img.heeeqkblog.dpdns.org/aa05418f8790158ec6d4e859a38ff4d.jpg){: .center }
 
 
 
 
 ---
 ??? success "用框图描述模拟信号、时域离散信号、数字信号的关系"
-    ![关系](https://img.heeeqkblog.dpdns.org/7584d9c9bf26fcb6a61eee01330c099.jpg)   
+    ![关系](https://img.heeeqkblog.dpdns.org/7584d9c9bf26fcb6a61eee01330c099.jpg){: .center }
 
 
 
@@ -266,7 +266,7 @@
 ---
 ??? success "DFT/FFT运算框图"
 
-    ![DFT/FFT框图](https://img.heeeqkblog.dpdns.org/5265b01a473f7a9b3a802eae5e11232.jpg)
+    ![DFT/FFT框图](https://img.heeeqkblog.dpdns.org/5265b01a473f7a9b3a802eae5e11232.jpg){: .center }
 
 ---
 ??? success "DFT与FFT运算次数"

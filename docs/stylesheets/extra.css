@@ -3,6 +3,32 @@
   max-width: 1440px; 
 }
 
+/* 图片居中样式 */
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* 表格整体居中（宽度自适应内容） */
+.md-typeset table:not([class]) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: table !important;   /* 保持 table 布局，一般不需要写，但保留无害 */
+}
+
+/* 表格内容文字居中 */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* 如果你确实需要某些表格占满宽度，可以单独用类控制 */
+.md-typeset table.full-width {
+    width: 100% !important;
+}
+
 
 /* 自定义字体 */
 body {
