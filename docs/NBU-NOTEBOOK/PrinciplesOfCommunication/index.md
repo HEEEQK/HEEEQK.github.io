@@ -5,6 +5,7 @@
 </div>
 
 ---  
+参考教材：《通信原理（第七版）》 樊昌信 曹丽娜.著
 
 参考文件：***<u>[参考文件](https://pan.baidu.com/s/1DuYYml6_Mj1zB4mTmBy3OA?pwd=yyds "参考文件")</u>***  
 
