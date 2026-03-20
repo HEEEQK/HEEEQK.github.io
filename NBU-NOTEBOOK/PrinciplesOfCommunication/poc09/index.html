@@ -864,6 +864,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数字信号的最佳接收
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -874,6 +886,78 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      最佳接收机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      匹配滤波器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      最佳基带传输系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最佳基带传输系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      消除码间干扰
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      误码率最小
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1088,6 +1172,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      最佳接收机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      匹配滤波器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      最佳基带传输系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最佳基带传输系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      消除码间干扰
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      误码率最小
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1108,7 +1251,73 @@
 <div><h1 id="_1">数字信号的最佳接收<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <div id="progress-container">
   <div id="progress-bar"></div>
-</div></div>
+</div>
+
+<h2 id="_2">最佳接收机<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>定义：在数字通信系统中，最直观且最合理的准则是<mark class="critic">“最小差错概率”</mark>准则。由于在传输过程中，信号会受到畸变和噪声的干扰，发送信号 <span class="arithmatex">\(s_i(t)\)</span> 时，在接收端不一定能判为 <span class="arithmatex">\(r_i\)</span> 出现，而是判决空间的所有状态都可能出现。这样将会造成错误接收，显然，期望错误接收的概率愈小愈好。  </p>
+</li>
+<li>
+<p>框图：最佳接收机设计利用<mark class="critic">信号检测理论描述</mark>和<mark class="critic">组成原理框图</mark>，实现最小差错概率<br>
+<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260320085357.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="最佳接收机" class="center" src="https://img.heeeqkblog.dpdns.org/20260320085357.png"></a>  </p>
+</li>
+</ul>
+<hr>
+<h2 id="_3">匹配滤波器<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>定义：当采用线性滤波器对接收信号滤波时，使滤波时，使<mark class="critic">滤波器输出信噪比在某一特定时刻达到最大</mark>，由此而导出的最佳线性滤波器称为匹配滤波器  </p>
+</li>
+<li>
+<p>滤波器作用：  </p>
+<ol>
+<li>使输出的有用信号成分尽可能强</li>
+<li>抑制信号带外噪声，减小噪声对判决的影响</li>
+</ol>
+</li>
+<li>
+<p>数学分析：析滤波器具有什么样的特性时才能使输出信噪比达到最大  </p>
+<ol>
+<li>
+<p>假设传输函数模型： <span class="arithmatex">\(H(\omega)=KS^*(\omega)\mathrm{e}^{-j\omega\mathrm{t}_0}\)</span><br>
+<span class="arithmatex">\(H(\omega)\)</span> 就是所要求的最佳线性滤波器的传输函数，该滤波器在给定时刻 <span class="arithmatex">\(t_0\)</span> 能获得最大输出信噪比 <span class="arithmatex">\(\frac{2E}{n_0}\)</span>  </p>
+</li>
+<li>
+<p>根据 <span class="arithmatex">\(H(\omega)\)</span> 可得匹配滤波器的单位冲激响应： <span class="arithmatex">\(h(t)=Ks(t_0-t)\)</span><br>
+<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260320090425.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="匹配滤波器单位冲激响应" class="center" src="https://img.heeeqkblog.dpdns.org/20260320090425.png"></a>  </p>
+</li>
+<li>综上，当输入信号 <span class="arithmatex">\(s(t)\)</span> 时，输出：  </li>
+</ol>
+<div class="arithmatex">\[s_0(t)=s(t)*h(t)=\int_{-\infty}^{\infty}s(t-\tau)h(\tau)\mathrm{d}\tau=KR(t-t_0)\]</div>
+<p>式中，<span class="arithmatex">\(R(t)\)</span> 为输入信号 <span class="arithmatex">\(s(t)\)</span> 的自相关函数。上式表明，匹配滤波器的输出波形是输入信号 <span class="arithmatex">\(s(t)\)</span> 的<mark class="critic">自相关函数</mark>的 <span class="arithmatex">\(K\)</span> 倍。因此，匹配滤波器可以看成是一个<mark class="critic">计算输入信号自相关函数</mark>的相关器。</p>
+</li>
+<li>
+<p>框图：</p>
+</li>
+</ul>
+<p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260320090819.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="匹配滤波器框图" class="center" src="https://img.heeeqkblog.dpdns.org/20260320090819.png"></a>  </p>
+<hr>
+<h2 id="_4">最佳基带传输系统<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h3 id="_5">消除码间干扰<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<ul>
+<li>传输函数要满足奈奎斯特准则</li>
+</ul>
+<div class="arithmatex">\[H(\omega)=G_R(\omega)G_T(\omega)\]</div>
+<hr>
+<h3 id="_6">误码率最小<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<ul>
+<li>接收滤波器哟啊使用匹配滤波器  </li>
+</ul>
+<div class="arithmatex">\[G_R(\omega)=G_T(\omega)=\sqrt{H(\omega)}\]</div>
+<ul>
+<li>在M进制等概率时，平均码元能量  </li>
+</ul>
+<div class="arithmatex">\[E=\frac{d^2}{3}(M^2-1)\]</div>
+<ul>
+<li>误码率  </li>
+</ul>
+<div class="arithmatex">\[P_e=\left(1-\frac{1}{M}\right)erfc\sqrt{\frac{3}{(M^2-1)}\cdot\frac{E}{n_0}}\]</div></div>
 
 
 
