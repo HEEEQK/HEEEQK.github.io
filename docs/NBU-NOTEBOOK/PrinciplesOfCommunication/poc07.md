@@ -34,7 +34,7 @@ $$e_{2ASK}\left(t\right)=\left[\sum_na_ng(t-nT_s)\right]cos\omega_ct$$
 
 ### 解调
 === "相干解调"
-    ![ASK相干解调](https://img.heeeqkblog.dpdns.org/20260319132725.png){: .center }
+    ![ASK相干解调](https://img.heeeqkblog.dpdns.org/20260321101410.png){: .center }
 === "非相干解调（包络检波）"
     ![ASK非相干解调](https://img.heeeqkblog.dpdns.org/20260319132619.png){: .center }
     ![ASK非相干波形](https://img.heeeqkblog.dpdns.org/20260319132656.png){: .center }
