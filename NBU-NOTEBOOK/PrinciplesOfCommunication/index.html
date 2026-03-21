@@ -1087,7 +1087,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      基础知识
+      知识点
     </span>
   </a>
   
@@ -1122,7 +1122,7 @@
 <p>参考文件：<strong><em><u><a href="https://pan.baidu.com/s/1DuYYml6_Mj1zB4mTmBy3OA?pwd=yyds" title="参考文件">参考文件</a></u></em></strong>  </p>
 <p>参考视频：<strong><em><u><a href="https://www.bilibili.com/video/BV1VwUhBAEXu/" title="参考视频">参考视频</a></u></em></strong></p>
 <hr>
-<h3 id="_2">基础知识<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h3 id="_2">知识点<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
 <details class="tip">
 <summary>通信、消息、信息、信号</summary>
 <ul>
@@ -1242,6 +1242,398 @@
 <details class="tip">
 <summary>热噪声</summary>
 <p>热噪声是电子器件（如电阻、半导体）内部电荷载流子（通常是电子）的随机热运动所产生的一种电噪声。它是通信系统和电子电路中最基本、最普遍存在的噪声源，也是一种白噪声。</p>
+</details>
+<hr>
+<details class="tip">
+<summary>门限效应</summary>
+<ul>
+<li>AM信号在大信噪比情况下，采用包络检波和相干解调的抗噪声性能几乎一致</li>
+<li>在小信噪比情况下，调制信号和噪声很难分开，有用信号被淹没在噪声中，此时的输出信噪比不是成比例下降，而是急剧恶化</li>
+<li>开始出现这种恶化的输入信噪比称为门限值</li>
+<li>门限效应是由于<mark class="critic">包络检波器的非线性解调</mark>引起的</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>调频、调相与调幅的优缺点对比  </summary>
+<ul>
+<li>调频：频率调制，通过调制信号控制载波频率变化</li>
+<li>调相：相位调制，通过调制信号控制载波相位变化</li>
+<li>二者统称：非线性调制</li>
+<li>优点：具有较高的抗噪声性能</li>
+<li>缺点：占有更宽的带宽</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>预加重、去加重--对抗噪声  </summary>
+<ul>
+<li>由于鉴频器（解调器）输出的噪声功率谱密度随频率的呈抛物线式增长，但是调频广播中的语音信号能量主要分布在低频端，故高频信号信噪比显著下降</li>
+<li>为改善此现象，对信号进行预加重与去加重</li>
+<li>核心：“先提升后压低”，在发送之前<mark class="critic">人为地提升信号的高频分量</mark>，接收后再进行衰减，达到在<mark class="critic">保持输出信号不变的情况下提高高频信噪比</mark></li>
+<li>步骤：<mark class="critic">调制之前</mark>与<mark class="critic">解调之后</mark></li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>数字基带信号、数字基带传输系统、数字频带传输系统  </summary>
+<ul>
+<li>数字基带信号：来自计算机等数据终端的各种信号，它们占据的频谱是从0频或低频开始的</li>
+<li>数字基带传输系统：不经过调制和解调就能够进行信号传输，由一些具有低通特性的有线信道组成</li>
+<li>数字频带传输系统：经过调制和解调的传输系统</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>传输码编码需要遵循的规则（指定主宰，计错简单）  </summary>
+<ul>
+<li>不含<mark class="critic">直</mark>流，低分分量少</li>
+<li>含有丰富的{定}时信息，便于从接受码中提取</li>
+<li>功率谱<mark class="critic">主</mark>瓣宽度<mark class="critic">窄</mark>，节省传输频带</li>
+<li>不受信源统<mark class="critic">计</mark>特性影响，即能适应信息源的变化</li>
+<li>具有内在检<mark class="critic">错</mark>能力</li>
+<li>编译码<mark class="critic">简单</mark>，降低通信时延与成本</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary>双相码、差分双相码、CMI码  </summary>
+<ul>
+<li>双相码：0--“01” ，1--“10”</li>
+<li>优点：每个码元间隔中心点都在跳变，含有丰富定时信息，无直流</li>
+<li>缺点：占用频带加倍
+<bar></bar></li>
+<li>差分双相码：在双相码的基础上额外前置一bit信号，用于确定每个码元开始处是否有存在额外跳变，用来确定码元，有跳变为1，无跳变为0</li>
+<li>CMI码：1码交替使用“11”“00”表示，0码固定用“01”表示</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 基带传输系统产生误码的原因？码间串扰？ </summary>
+<ul>
+<li>产生误码原因：接收端抽样判决器错误判断</li>
+<li>导致错误判断：码间串扰与噪声</li>
+<li>码间串扰：传输系统总特性不理想，导致前码元的波形出现很长拖尾，蔓延到后码元的抽样时刻上</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 消除码间串扰 </summary>
+<ul>
+<li>只要基带传输系统的冲激响应波形仅在本码元的抽样时刻达到最大值，并在其他码元的抽样时刻均均为0</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 奈奎斯特带宽与奈奎斯特速率 </summary>
+<ul>
+<li>奈奎斯特速率：能够实现无码间串扰的<mark class="critic">最高传输速率</mark></li>
+<li>奈奎斯特带宽：对应的理想低通滤波器的带宽</li>
+<li>抽样过程中，想要无失真恢复原信号，抽样频率应大于2倍的频谱最高频率</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 眼图 </summary>
+<ul>
+<li>定义：通过示波器观察接收端的基带信号波形，从而估计和调整系统性能的方法</li>
+<li>作用：可以观察码间串扰和信道噪声等情况</li>
+<li>眼睛越大越端正----码间串扰小</li>
+<li>眼睛最大时刻----最佳抽样时刻</li>
+<li>阴影宽度----受噪声干扰程度</li>
+<li>中央横轴位置----判决门限电平</li>
+<li>抽样时刻上下两阴影边带距离的一半----噪声容限，噪声的瞬时值超过它会发生错判</li>
+<li><a class="center" href="https://img.heeeqkblog.dpdns.org/94373dc3e11310c4211023015c00ecd.jpg"></a>  </li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 部分响应 </summary>
+<ul>
+<li>人为、有规律地在抽样时刻引入码间串扰，用以加速传输波形尾部衰减，并在接收端判决前消除，从而达到减小判决错误与降低定时要求的目的</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 均衡器、时域均衡器---对抗码间串扰 </summary>
+<ul>
+<li>均衡器：系统中插入的可调滤波器来校正或补偿系统特性，减少码间串扰</li>
+<li>时域均衡器：从波形角度出发，直接校正已失真的相应波形，使输出波形在本码元抽样时刻达到最大值</li>
+<li>个人理解：一个滤波器不够满足无码间串扰条件，再多加一个去补偿</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 数字调制、解调 </summary>
+<ul>
+<li>数字调制：利用数字基带信号控制高频载波，把数字基带信号编程数字带通信号</li>
+<li>解调：还原过程</li>
+<li>幅度键控（ASK）、频移键控（FSK）、相位键控（PSK）</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 过零检测法 </summary>
+<ul>
+<li>2FSK特有检测方法</li>
+<li>原理：根据信号的过零点数随不同频率而异，通过检测过零点数目来区分两个不通过频率的信号码元</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 2ASK、2FSK、2PSK比较 </summary>
+<ul>
+<li>所占频宽：2FSK＞2ASK=2PSK</li>
+<li>2ASK、2PSK都是码元速率的2倍，即 <span class="arithmatex">\(2f_s\)</span></li>
+<li>2PSK: <span class="arithmatex">\(2f_s + |f_1 - f_2 |\)</span> </li>
+<li>抗干扰能力：2PSK＞2FSK＞2ASK</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> QAM </summary>
+<ul>
+<li>正交振幅调制，振幅和相位联合键控，Q称为星座调制</li>
+<li>比PSK有更大的噪声容限，适合在频带资源有限的场合</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> MSK、GMSK </summary>
+<ul>
+<li>MSK：<mark class="critic">最小频移键控</mark>是一种包络恒定、相位连续、带宽最小并且严格正交的<mark class="critic">2FSK信号</mark></li>
+<li>GMSK：<mark class="critic">高斯最小频移键控</mark>是在进行MSK调制前将信号脉冲通过一个高斯型低通滤波器，进一步使信号的<mark class="critic">功率谱密度集中</mark>和<mark class="critic">减小对邻频的干扰</mark></li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> OFDM </summary>
+<ul>
+<li>正交频分复用：多载波并行调制</li>
+<li>极大地简化了对抗多径效应和码间串扰的均衡复杂度</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 数字最佳接收的准则、匹配滤波器、相关接收机 </summary>
+<ul>
+<li>数字最佳接收的准则：错误概率最小</li>
+<li>匹配滤波器：对接收信号进行滤波时，使抽样时刻上<mark class="critic">输出信噪比最大</mark>的线性滤波器</li>
+<li>相关接收机：基于错误概率最小准则推导出来的就是相关接收机</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 模拟信号数字化 </summary>
+<ul>
+<li>原因：使模拟信号能够在数字通信系统中传输</li>
+<li>步骤：抽样、量化、编码</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 模拟脉冲调制方式 </summary>
+<ul>
+<li>脉冲振幅调制：PAM</li>
+<li>脉冲宽度调制：PWM</li>
+<li>脉冲位置调制：PPM</li>
+<li>抽样后的信号在<mark class="critic">时间上离散</mark>，但是幅度仍是连续的，故仍是模拟信号</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 为什么要量化 </summary>
+<ul>
+<li>模拟信号的幅度在经过抽样后仍是连续的，必须经过量化后才能变成数字信号</li>
+<li>均匀量化</li>
+<li>非均匀量化：语音信号大部分分布在低频段，均匀量化会导致相对误差加大</li>
+<li>量化噪声：量化后的电平与量化前电平的差值</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 非均匀量化的实现 </summary>
+<ul>
+<li>实现：将信号先进行压缩，然后均匀量化</li>
+<li>两种压缩特性：A律压缩（13折线）与μ律压缩（15折线）</li>
+<li>15折线的原因：15折线的第一段与第二段斜率不同</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> PCM </summary>
+<ul>
+<li>PCM：脉冲编码调制，也成A/D转化，完成采样、量化、编码步骤</li>
+<li>DPCM：差分脉冲编码调制，改善占用带宽情况（在PCM中，传一路数字信号比传一路模拟信号占用更多带宽）</li>
+<li>DM增量调制：最简单的DPCM，即DPCM中的量化器量化电平数取2</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 一般量化噪声与过载量化噪声 </summary>
+<ul>
+<li>一般量化噪声：量化前与量化后的差值，误差大小<mark class="critic">不超过半个量化步长</mark>，即 <span class="arithmatex">\(Δ/2\)</span></li>
+<li>过载量化噪声：输入信号幅度超过量化器最大量化电平（即满幅值）时，超出部分的样值被强制削波为最大或最小量化电平。误差大小可能远大于<span class="arithmatex">\(Δ/2\)</span></li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 语音压缩编码分类 </summary>
+<ul>
+<li>波形编码：PCM、DPCM、DM</li>
+<li>参量编码：分析语音的短时频谱特性，之后提取频谱参量</li>
+<li>混合编码：为改进参量编码，在激励源中加入其他语音波形，从而改进合成语音的质量</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 图像压缩 </summary>
+<ul>
+<li>有损压缩</li>
+<li>无损压缩</li>
+<li>静止图像压缩：其信号由二维像素构成，各临近像素之间具有相关性，可以使用差分编码或其他预测方法，仅传输预测误差从而压缩数据率</li>
+<li>动态图像压缩：利用临近帧的像素之间的相关性，在静态压缩的基础上再设法减小帧像素之间的相关性</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 霍夫曼编码 </summary>
+<ul>
+<li>无前缀变长码</li>
+<li>有限离散信源中各字符的信息含量不同</li>
+<li>为确定变长码每个字符的分界，需要采用唯一可译码</li>
+<li>唯一可译码可以分为：即时可译码（无前缀）和非即时可译码</li>
+<li>详情见《信息论与编码》</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 反应数据压缩编码性能的指标 </summary>
+<ul>
+<li>压缩比：压缩前每个字符的平均码长/压缩后每个字符的平均码长</li>
+<li>编码效率：编码后的字符平均信息量/编码的平均码长</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 差错控制技术 </summary>
+<ul>
+<li>在经过选择调制制度、解调方法、调整发射功率等方法后依然达不到误码率要求，则<mark class="critic">只能采用差错控制技术</mark></li>
+<li>检错重发：添加差错控制码元，接收端检测到错误后利用反向信道要求发射端重发，直到正确。自动要求重发系统（ARQ）</li>
+<li>前向纠错：添加差错控制码元，不但能够发现错码，还能纠正（加入的码元多，设备复杂，但是不需要反向信道，实时性好）</li>
+<li>反馈检验：不需要插入差错控制码元，接收端将收到的信号原封不动发回发送端，逐一比较，有错误则重发（需要双向通道，传输效率低）</li>
+<li>差错删除：发现错误码元后立刻删除，并且不要求重发（适用于含有大量冗余码元，并且删除部分码元不影响应用）</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 监督码元、码率、冗余度 </summary>
+</details>
+<hr>
+<details class="tip">
+<summary> 分组码、码重、码距 </summary>
+<ul>
+<li>分组码：将表示信息的信息码分组，为每组信息码附加上若干监督码元的编码</li>
+<li>码重：码组中“1”的个数</li>
+<li>码距：两个码组中对应为上数字不同的个数（11111与11010的码距为2）</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 线性分组码 </summary>
+<ul>
+<li>监督码元与信息码元之间满足线性方程</li>
+<li>线性分组码具有<mark class="critic">封闭性</mark>：两个任意可用码组之和仍为一个可用码组</li>
+<li><mark class="critic">线性分组码的最小距离等于非0码的最小码重</mark></li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 循环码 </summary>
+<ul>
+<li>线性分组码的一种，检错纠错能力强</li>
+<li>任意码组左移或右移一位后仍是码组中一员</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 卷积码 </summary>
+<ul>
+<li>非线性码，又称连环码</li>
+<li>卷积码的编码器是有记忆的：对于给定的时刻，输出不仅与当前的输入有关，还与前面的输入有关</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 扩频通信、扩频通信原理、扩频通信目的 </summary>
+<ol>
+<li>扩频通信：将基带信号的频谱通过某种调制扩展到远大于原基带信号带宽  </li>
+<li>扩频通信原理：香农定理，即用带宽去换取信噪比  </li>
+<li>扩频通信目的：  <ul>
+<li>提高抗窄带干扰能力</li>
+<li>防止窃听，扩频信号的功率谱密度很小，发送信号隐藏了背景噪声</li>
+<li>提高抗多径传输效应能力</li>
+<li>使多个用户用户可以共用一个频带，不同用户可以采用互相正交的不同频谱码（码分多址原理）</li>
+<li>提供测距能力：通过测量扩频信号的自相关特性峰值出现时刻，可以从信号传输时间计算传输距离</li>
+</ul>
+</li>
+</ol>
+</details>
+<hr>
+<details class="tip">
+<summary> 同步与同步的提取和传输 </summary>
+<ul>
+<li>同步主要解决三大问题：载波同步、位同步（码元同步）、帧同步（群同步）</li>
+<li>提取：外同步法与自同步法</li>
+<li>外同步法：发送端发送专门的同步信息（导频信息），接收端将导频信息提取出来作为同步信号</li>
+<li>自同步法：在发送端不发送导频信息的情况下，接收端设法从接收信号中提取同步信息</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 载波同步 </summary>
+<ul>
+<li>采用相干解调时，接收端提取一个与发射端载频信号同频同相的相干载波的过程</li>
+<li>直接提取（自同步法）：在接收端对已调信号进行某种非线性变换，得到载波对应的谐波分量
+<a class="glightbox" href="https://img.heeeqkblog.dpdns.org/9576fcfe0b5fd46aeacc33a2bf714fa.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="载波同步直接法" src="https://img.heeeqkblog.dpdns.org/9576fcfe0b5fd46aeacc33a2bf714fa.jpg"></a></li>
+<li>插入导频法：对应外同步法</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 码元同步（位同步） </summary>
+<ul>
+<li>在接收端产生与接收码元的重复频率和相位一致的定时脉冲序列用于判决</li>
+<li>直接提取：滤波法、锁相环法</li>
+<li>插入导频法：在信息码元序列之外附加附加码元同步使用的辅助信息位，达到提取码元同步信息的目的，常用：反相相消法</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 帧同步（群同步） </summary>
+<ul>
+<li>获取能够正确分离各路时隙信号的起始标记（每帧信号前）</li>
+<li>起止式同步法</li>
+<li>插入特殊同步码组法：集中插入（巴克码）、间隔式插入</li>
+</ul>
+</details>
+<hr>
+<details class="tip">
+<summary> 网同步 </summary>
+<ol>
+<li>通信网的时钟同步，解决网中各站的载波同步、位同步和帧同步等问题</li>
+<li>通信网可以分为同步网与异步网（每一步操作都有反馈）</li>
+<li>开环法网同步：  <ul>
+<li>优点；捕捉快，不需反向链路也可以工作，实时运算小</li>
+<li>缺点：不灵活，需要外部提供所需的链路参考数据</li>
+</ul>
+</li>
+<li>闭环法网同步： <ul>
+<li>优点：无需知晓链路参考数据  </li>
+<li>缺点：终端站要有较高的实时处理能力，每个终端与中心站之间需要双向链路，捕捉同步也需要较长时间</li>
+</ul>
+</li>
+</ol>
 </details>
 <hr></div>
 
