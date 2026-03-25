@@ -1323,8 +1323,9 @@
 <details class="success">
 <summary>DFT频谱分析时，提高频率分辨率的方法</summary>
 <ul>
-<li>增大截取信号的持续时间来提高频谱分辨率，即（1）：给定采样频率，增加采样点数；（2）：给定采样点数，降低采样频率（在满足采样定理的条件下）  </li>
-<li>原理： <span class="arithmatex">\(ΔF = \frac{f_s}{N}\)</span>  </li>
+<li>增大截取信号的持续时间(T)来提高频谱分辨率（降低 <span class="arithmatex">\(Δf\)</span> ），即（1）：给定采样频率，增加采样点数；（2）：给定采样点数，降低采样频率（在满足采样定理的条件下）  </li>
+<li>原理： <span class="arithmatex">\(Δf = \frac{1}{T}=\frac{f_s}{N}\)</span>  </li>
+<li>易混淆(2)：在N不变的情况下，提高采样频率会使能分析的最高频率变高，但是由于N不变，会使 <span class="arithmatex">\(f\)</span> 的间隔变大，所以要在保证满足采样定理的条件下，降低采样频率</li>
 </ul>
 </details>
 <hr>
