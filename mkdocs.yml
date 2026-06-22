@@ -305,3 +305,23 @@ nav:
   - 闲言碎语:
       - blog/index.md
       - blog/xidianfushi26/index.md
+    
+  - 27考研:
+      - 27NPEE/index.md
+      - 政治:
+        - 27NPEE/politics/index.md
+
+
+      - 英语:
+        - 27NPEE/english/index.md
+
+      - 数学:
+        - 27NPEE/math/index.md
+
+      - 信号与系统:
+        - 27NPEE/SignalsAndSystems/index.md
+
+      - 电路:
+        - 27NPEE/circuits/index.md
+
+    
