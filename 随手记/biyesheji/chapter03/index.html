@@ -360,6 +360,26 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../27NPEE/" class="md-tabs__link">
+          
+  
+    
+  
+  27考研
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -924,6 +944,65 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../27NPEE/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    27考研
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1165,12 +1244,16 @@ s^* = \arg \min_{s=1,2,\dots,\bar{s}} \left\{ \varepsilon_s \right\}
 <p><a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260406142700.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="https://img.heeeqkblog.dpdns.org/20260406142700.png"></a>
 <a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260406142721.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="https://img.heeeqkblog.dpdns.org/20260406142721.png"></a>
 <a class="glightbox" href="https://img.heeeqkblog.dpdns.org/20260406142748.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" class="center" src="https://img.heeeqkblog.dpdns.org/20260406142748.png"></a></p>
-<p>!!! tip success"有关输入部分"
-    - <span class="arithmatex">\(J\)</span>:每帧时隙数
-    - <span class="arithmatex">\(Y\)</span>:接收端信号(K行J列)
-    - <span class="arithmatex">\(G\)</span>:等效信道矩阵(K行J列)
-    - <span class="arithmatex">\(N_{cv}\)</span>:测试数据数量
-    - $<span class="arithmatex">\(\bar{s}\)</span>$:最小估计误差</p>
+<div class="admonition tip">
+<p class="admonition-title">有关输入部分</p>
+<ul>
+<li><span class="arithmatex">\(J\)</span>:每帧时隙数</li>
+<li><span class="arithmatex">\(Y\)</span>:接收端信号(K行J列)</li>
+<li><span class="arithmatex">\(G\)</span>:等效信道矩阵(K行J列)</li>
+<li><span class="arithmatex">\(N_{cv}\)</span>:测试数据数量</li>
+<li>$<span class="arithmatex">\(\bar{s}\)</span>$:最小估计误差</li>
+</ul>
+</div>
 <p><bar>
 值得一提的是，在观测数据的数量一定的条件下，训练数据的数量 <span class="arithmatex">\(N_c\)</span> 与测试数据的数量 <span class="arithmatex">\(N_{cv}\)</span> 之间存在着一个折衷。一方面，增加训练数据的数量 <span class="arithmatex">\(N_c\)</span>，尽管信号重构能力可以因训练数据量增多而提高，但用户活跃度估计的准确性会降低；另一方面，增加测试数据的数量 <span class="arithmatex">\(N_{cv}\)</span>，虽然基于测试数据估计的用户活跃度的准确性会更好，但是因为用作重构稀疏信号的训练数据减少，信号的重构能力将降低。因此，测试数据量的选取要适中，且有一个最优值。</bar></p>
 <hr>
@@ -1211,6 +1294,10 @@ s^* = \arg \min_{s=1,2,\dots,\bar{s}} \left\{ \varepsilon_s \right\}
 \]</div>
 <hr>
 <h3 id="_6">解决方案<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">个人理解</p>
+<p>根据本地的导频（就是已知的导频）和收到的导频理论上就可以用那个算法了，就相当于可以去估计G了，然后根据用G去估计原始信号x，这一解决方案将这两步融合为一步</p>
+</div>
 <p>实际上，<span class="arithmatex">\(\mathbf{h}\)</span> 和 <span class="arithmatex">\(\mathbf{x}_p^{[j]}\)</span> 的支撑集都是一样的。因此，我们将引入一个混合变量 <span class="arithmatex">\(\mathbf{a}_d^{[j]} = \mathrm{diag}(\mathbf{h}) \mathbf{x}_p^{[j]}\)</span> 来统一表示数据符号 <span class="arithmatex">\(\mathbf{x}_p^{[j]}\)</span> 和其对应信道状态信息 <span class="arithmatex">\(\mathbf{h}\)</span> 的相同支撑集 <span class="arithmatex">\(\Gamma\)</span>。现在，我们可以重新表示式(4-15)为</p>
 <div class="arithmatex">\[
 \mathbf{y}_p^{[j]} = \mathbf{S} \mathbf{a}_d^{[j]} + \mathbf{z}_p^{[j]}
@@ -1394,8 +1481,6 @@ s^* = \arg \min_{s=1,2,\dots,\bar{s}} \left\{ \varepsilon_s \right\}
         <script src="https://imgbb.com/upload.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
