@@ -220,21 +220,17 @@ extra:
 # 额外的js文件和css文件
 extra_javascript:
   # 自定义js文件，一定要放在最后面，不然会覆盖掉主题的js文件
-  # - https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js   
-  # - https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js
+
   - javascripts/extra.js
   - https://imgbb.com/upload.js
-  # # 公式二选一
-  # # - javascripts/mathjax.js
-  # # - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-  
-  # - javascripts/katex.js
-  # - https://unpkg.com/katex@0/dist/katex.min.js
-  # - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-
   - javascripts/mathjax.js
-# - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # 换用 unpkg CDN
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+#  - javascripts/extra.js
+#  - https://imgbb.com/upload.js
+#  - javascripts/mathjax.js
+#  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
 #   # - '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
